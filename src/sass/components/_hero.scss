@@ -5,7 +5,7 @@
   background-size: 208px 178px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-color: $text-color;
+  background-color: $section-background-color;
 
   letter-spacing: 0.06em;
   text-align: center;
@@ -14,12 +14,12 @@
   @media screen and (max-width: 576px) {
     max-width: 480px;
     min-height: 618px;
-    background-image: url('../../images/hero-img/hero-img.png');
+    background-image: url('./../images/hero-img/hero-img.png');
 
     /* Переопределяем путь к 2x изображению
     если плотность экрана как минимум 2 */
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('../../images/hero-img/hero-img@2x.png');
+      background-image: url('./../images/hero-img/hero-img@2x.png');
     }
   }
 }
