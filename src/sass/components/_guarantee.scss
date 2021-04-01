@@ -25,8 +25,6 @@ html  {
 .guarantee__section {
     width: 1314px;
     height: 502px;
-
-    background-color:tomato;
 }
 
 .guarantee__header {
@@ -40,6 +38,7 @@ html  {
     letter-spacing: 0.03em;
 
     color: #111518;
+    // $title-color
 
     text-align: center;
 }
@@ -49,5 +48,25 @@ html  {
     width: 1314px;
     height: 395px;
 
-    padding: 50px 112px 45px 112px;
+    background-color: #F1F1F1;
+    // $guarantee-section-background-color
+
+    padding: 50px 112px 45px 164px;
+}
+
+.guarantee__item {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    color: #3D3D3D;
+    // $secondary-text-color
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+
+
+
 }
