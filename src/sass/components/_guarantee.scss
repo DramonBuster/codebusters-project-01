@@ -1,1 +1,49 @@
 // Андрей
+html  {
+    box-sizing: border-box;
+  }
+    
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+      
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .list {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+  }
+
+.guarantee__section {
+    width: 1314px;
+    height: 502px;
+
+    background-color:tomato;
+}
+
+.guarantee__header {
+
+    margin: 0;
+    padding-bottom: 50px;
+
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+
+    color: #111518;
+
+    text-align: center;
+}
+
+.guarantee__list {
+    padding: 50px 112px 45px 112px;
+}
