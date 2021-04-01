@@ -22,17 +22,51 @@ html  {
     list-style: none;
   }
 
-.guarantee__section {
-    width: 1314px;
-    height: 502px;
+//   .guarantee__container {
+
+
+.guarantee {
+
+ 
+
+    // @media screen and (min-width: 768px) {
+    //     padding-bottom: 30px;
+    // }
+
+    // @media screen and (min-width: 1314px) {
+    //     padding-bottom: 45px;
+    // }
+
+}
+
+.guarantee__container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+
+        padding-left: 183px;
+        padding-right: 183px;
+    }
 }
 
 .guarantee__header {
+    margin: 0 0 30px 0;
 
-    margin: 0;
-    padding-bottom: 50px;
-
-    font-size: 46px;
+    font-size: 26px;
     font-weight: 800;
     line-height: 1.3;
     letter-spacing: 0.03em;
@@ -41,31 +75,89 @@ html  {
     // $title-color
 
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+
+        font-size: 46px;
+    }
 }
 
 .guarantee__list {
-
-    width: 1314px;
-    height: 395px;
+    padding: 30px 20px 31px 20px;
 
     background-color: #F1F1F1;
     // $guarantee-section-background-color
 
-    padding: 50px 112px 45px 164px;
+    @media screen and (min-width: 768px) {
+        padding: 30px 50px 30px 79px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 50px 112px 45px 112px;
+    }
 }
 
 .guarantee__item {
-    font-size: 20px;
+    position: relative;
+
+    padding-left: 35px;
+
+    font-size: 12px;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.67;
 
     color: #3D3D3D;
     // $secondary-text-color
 
     &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 23px;
     }
 
+    @media screen and (min-width: 768px) {
+        padding-left: 39px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-left: 52px;
+
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+
+        color: #3D3D3D;
+        // $secondary-text-color
+    }
+
+
+.guarantee__remark {
+ color: #FF6B09;
+    //  $brand-color
+}
+
+.guarantee__svg {
+    position: absolute;
+
+    top: 0;
+    left: 0%;
+}
+
+.guarantee__svg::before {
+
+    display: inline-block;
+    content: "";
+    width: 40px;
+    height: 20px;
+
+    background-color: tomato;
+
+    color: #B9B9B9;
+    // $primary-text-color
+}
 
 
 
