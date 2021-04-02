@@ -1,8 +1,54 @@
 // Алексей
 .reviews {
-    
-    &__button-icon {
-        width: 25px;
-        fill: $brand-color;
+    position: relative;
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+  &__button {
+    position: absolute;
+    // top: 50%;
+    // transform: translateY(-50%);
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-color: transparent;
+    transition: 250ms $timing-fn;
+
+    &--left {
+        left: 0;
     }
+
+    &--right {
+        right: 0;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: $brand-color;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__button-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    height: 25px;
+    width: 25px;
+
+    background-color: transparent;
+    fill: $brand-color;
+
+    transition: 250ms $timing-fn;
+    transform: translate(-50%, -50%);
+
+    .reviews__button:focus &,
+    .reviews__button:hover & {
+      fill: $white;
+    }
+  }
 }
