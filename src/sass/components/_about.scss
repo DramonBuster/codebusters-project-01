@@ -11,6 +11,7 @@
     text-align: left;
     padding-bottom: 20px;
     @media (min-width: $desktop) {
+        padding-bottom: 30px;
         font-size: 30px;
         line-height: 1.233;
     }
@@ -22,6 +23,9 @@
     width: 100%;
     padding-top: 10px;
     border-bottom: 1px solid #b9b9b9;
+    @media (min-width: $desktop) {
+        padding-top: 15px;
+    }
 }
 
 .wrapper {
@@ -36,19 +40,19 @@
     }
 }
 
-.dash {
-    color: $brand-color;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 1.65;
-}
-
 .about__img {
     max-width: 243px;
     margin-bottom: 20.42px;
     @media (min-width: $desktop) {
         max-width: 530px;
-        // width: 100%;
+        margin: 0;
+    }
+}
+
+.skills__list {
+    margin-bottom: 5px;
+    @media (min-width: $desktop) {
+        margin-bottom: 15px;
     }
 }
 
@@ -56,27 +60,88 @@
     display: flex;
 }
 
-.skills__text {
+.skills__item:not(:last-child) {
+    padding-bottom: 24px;
+}
+
+.section .skills__text {
     color: $title-color;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 1.214;
-    letter-spacing: 0.06px;
-    padding-bottom: 24px;
+    letter-spacing: 0.08em;
     max-width: 253px;
     @media (min-width: $tablet) {
         max-width: 402px;
     }
+    @media (min-width: $desktop) {
+        min-width: 530px;
+        font-size: 16px;
+        line-height: 1.218;
+        letter-spacing: 0.06em;
+    }
 }
 
 .skills__svg {
+    box-sizing: content-box;
     fill: $brand-color;
     width: 17.08px;
     height: 14px;
     padding-right: 8.92px;
+    @media (min-width: $desktop) {
+        padding-right: 34.59px;
+        width: 24.41px;
+        height: 20px;
+    }
 }
 
 .skills__svg use {
     box-sizing: content-box;
+}
+
+.dash {
+    color: $brand-color;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.65;
+    margin-bottom: 5px;
+    @media (min-width: $desktop) {
+        margin-bottom: 15px;
+    }
+}
+
+.education__list {
+    margin-bottom: 10px;
+    @media (min-width: $desktop) {
+        margin-bottom: 20px;
+    }
+}
+
+.education__item:not(:last-child) {
+    padding-bottom: 24px;
+}
+
+.education__text {
+    color: $primary-text-color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.666;
+    @media (min-width: $desktop) {
+        font-size: 18px;
+        line-height: 1.78;
+    }
+}
+
+.about__link {
+    color: $brand-color;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.666;
+    text-decoration: underline;
+    @media (min-width: $desktop) {
+        font-size: 18px;
+        line-height: 1.555;
+    }
 }
