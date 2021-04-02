@@ -6,6 +6,14 @@
     $title-color 70%,
     $white 30%
   );
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 100px;
+  }
 }
 
 .problems__title {
@@ -32,38 +40,42 @@
   }
 
   &--color{
-      color: $brand-color;
+    color: $brand-color;
   }
 }
 
-.problems__list {
+.problems__container {
   padding: 20px 30px;
 
   background-color: $white;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
-  counter-reset: section;
-  list-style-type: none;
-
   @media screen and (min-width: $tablet) {
-    padding: 30px 46px 26px 96px;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    margin-left: calc( -1 * 22px);
-    margin-top: calc( -1 * 22px);
-
-    & > .problems__item {
-      flex-basis: calc(100% / 2 - 22px);
-      margin-left: 22px;
-      margin-top: 22px;
-    }
+    padding: 30px 96px 26px 96px;
   }
 
   @media screen and (min-width: $desktop) {
     padding: 70px 112px 62px 114px;
+  }
+}
+
+.problems__list {
+  counter-reset: section;
+  list-style-type: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-left: calc( -1 * 32px);
+    margin-top: calc( -1 * 32px);
+
+    & > .problems__item {
+      flex-basis: calc(100% / 2 - 32px);
+      margin-left: 32px;
+      margin-top: 32px;
+    }
   }
 }
 
