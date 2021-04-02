@@ -6,4 +6,32 @@
   color: $title-color;
 }
 .advantages__list {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.advantages__item {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  & > h3 {
+    padding: 0;
+    margin: 0;
+  }
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 59px;
+    height: 60px;
+    margin-right: 10px;
+    background-image: url('./../images/hero-img/rectangle.svg'),
+      url('./../images/hero-img/female-student.svg');
+    background-size: 59px 60px, 33px 40px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 }
