@@ -97,9 +97,12 @@ html  {
             margin-bottom: 20px;
         }
     }
+
 }
 
 .guarantee__info {
+    position: relative;
+
     margin: 0;
     padding-left: 35px;
 
@@ -121,6 +124,22 @@ html  {
         font-size: 20px;
         line-height: 1.4;
 
+    }
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        content: "";
+
+        width: 15px;
+        height: 20px;
+
+    //    background-image: url("./fire-mob.svg");
+
+        // background-color: tomato;
     }
     
 }
