@@ -1,10 +1,16 @@
 // Настя
-
-.form-input:valid {
-    border-color: green;
+.container {
+    background-color: $title-color;
 }
 
+.form-input {
+    background-color: transparent;
+}
+
+.form-input:valid {
+    border-color: $white;
+}
 
 .form-input:invalid{
-    border-color: red;
+    border-color:rgb(255, 0, 0);
 }
