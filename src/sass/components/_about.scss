@@ -1,1 +1,82 @@
-// АНтон
+// Антон
+.section__title.section__title--about {
+    text-align: left;
+}
+
+.section__title.section__title--sub-title {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-align: left;
+    padding-bottom: 20px;
+    @media (min-width: $desktop) {
+        font-size: 30px;
+        line-height: 1.233;
+    }
+}
+
+.section__title.section__title--sub-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.wrapper {
+    @media (min-width: $tablet) {
+        display: flex;
+    }
+}
+
+.list-wrapper {
+    @media (min-width: $tablet) {
+        padding-left: 40px;
+    }
+}
+
+.dash {
+    color: $brand-color;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.65;
+}
+
+.about__img {
+    max-width: 243px;
+    margin-bottom: 20.42px;
+    @media (min-width: $desktop) {
+        max-width: 530px;
+        // width: 100%;
+    }
+}
+
+.skills__item {
+    display: flex;
+}
+
+.skills__text {
+    color: $title-color;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.214;
+    letter-spacing: 0.06px;
+    padding-bottom: 24px;
+    max-width: 253px;
+    @media (min-width: $tablet) {
+        max-width: 402px;
+    }
+}
+
+.skills__svg {
+    fill: $brand-color;
+    width: 17.08px;
+    height: 14px;
+    padding-right: 8.92px;
+}
+
+.skills__svg use {
+    box-sizing: content-box;
+}
