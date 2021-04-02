@@ -6,7 +6,7 @@
     $title-color 70%,
     $white 30%
   );
-
+    
   @media screen and (min-width: $tablet) {
     padding-top: 60px;
   }
@@ -55,7 +55,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 70px 112px 62px 114px;
+    padding: 70px 114px 62px 114px;
   }
 }
 
