@@ -4,19 +4,28 @@
   border: none;
   list-style: none;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
-  
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
+body {
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 0.08em;
+
+  background-color: $section-background-color;
+  color: $white;
+}
+
 h1,
 h2,
 h3,
 h4,
-p, 
+p,
 ul,
 li,
 a {
@@ -86,4 +95,3 @@ a {
     line-height: 1.304;
   }
 }
-
