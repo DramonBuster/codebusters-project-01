@@ -1,10 +1,39 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.08em;
 
   background-color: $section-background-color;
+  color: $white;
+}
 
-  color: $primary-text-color;
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style: none;
 }
 
 /*контейнер*/
