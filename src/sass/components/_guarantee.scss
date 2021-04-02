@@ -24,13 +24,13 @@ html  {
 
 
 .guarantee {
+  background-color: #ffffff;
 
 }
 
 .guarantee__container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 
     @media screen and (min-width: 480px) {
         width: 480px;
@@ -43,11 +43,10 @@ html  {
         padding-right: 40px;
     }
 
-    @media screen and (min-width: 1200px) {
-        width: 1200px;
+    @media screen and (min-width: 1314px) {
+        width: 1314px;
 
-        padding-left: 183px;
-        padding-right: 183px;
+        padding: 0;
     }
 }
 
@@ -64,7 +63,7 @@ html  {
 
     text-align: center;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1314px) {
         margin-bottom: 50px;
 
         font-size: 46px;
@@ -81,46 +80,50 @@ html  {
         padding: 30px 50px 30px 79px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1314px) {
         padding: 50px 112px 45px 112px;
     }
 }
 
 .guarantee__item {
-    position: relative;
-
-    padding-left: 35px;
-
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.67;
-
-    color: #3D3D3D;
-    // $secondary-text-color
+    // position: relative;
 
     &:not(:last-child) {
         margin-bottom: 23px;
     }
 
     @media screen and (min-width: 768px) {
-        padding-left: 39px;
-
         &:not(:last-child) {
             margin-bottom: 20px;
         }
     }
+}
 
-    @media screen and (min-width: 1200px) {
+.guarantee__info {
+    margin: 0;
+    padding-left: 35px;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.67;
+    letter-spacing: 0;
+
+    color: #3D3D3D;
+    // $secondary-text-color
+
+    @media screen and (min-width: 768px) {
+        padding-left: 39px;
+    }
+
+    @media screen and (min-width: 1314px) {
         padding-left: 52px;
 
         font-size: 20px;
-        font-weight: 500;
         line-height: 1.4;
 
-        color: #3D3D3D;
-        // $secondary-text-color
     }
-
+    
+}
 
 .guarantee__remark {
  color: #FF6B09;
@@ -145,8 +148,4 @@ html  {
 
     color: #B9B9B9;
     // $primary-text-color
-}
-
-
-
 }
