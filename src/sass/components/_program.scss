@@ -1,1 +1,139 @@
 // Ренат
+.program-section {
+  padding-top: 58px;
+  padding-bottom: 410px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  color: #ffffff;
+  background: #111518;
+  // background-image: url(./../images/program-img/program-img.jpg);
+  background-repeat: no-repeat;
+  background-position: right -56px bottom 416px;
+}
+.program__title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  /* border-bottom: 1px solid #ff6b09; */
+}
+.program__container {
+  padding-left: 96px;
+  display: flex;
+  padding-top: 43px;
+}
+.program__line {
+  height: 1150px;
+
+  margin-top: 8px;
+  /* margin-top: 51px; */
+  border-left: 1px solid #ffffff;
+  /* outline: 0.5px solid red; */
+}
+.program-list {
+  padding-left: 26px;
+  margin-bottom: 50px;
+  /* padding-top: 8px; */
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.08em;
+  /* outline: 0.5px solid white; */
+  max-width: 100%;
+}
+.program-list__item {
+  text-transform: uppercase;
+  position: relative;
+}
+.program-list__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.program-list__item::before {
+  position: absolute;
+  top: 7px;
+  left: -33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  content: ' ';
+  background-color: #ff6b09;
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+.program-course {
+  /* position: relative; */
+  /* outline: 0.5px solid white; */
+  font-size: 12px;
+  line-height: 164.9%;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: #ff6b09;
+  margin-top: 5px;
+
+  /* padding-left: 17px; */
+}
+.program-course__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.program-course__thumb {
+  /* display: inline-block; */
+  display: flex;
+}
+.program-course__icon {
+  display: inline-block;
+  padding-top: 9px;
+  margin-right: 8px;
+  /* position: absolute;
+ 
+  top: 8px;
+  left: 0; */
+  fill: #ff6b09;
+}
+/* .program-test {
+  display: inline-block;
+} */
+.program-course__svg {
+}
+/* .program-course__item::before {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2px;
+  height: 12px;
+  content: " ";
+  background-color: #ff6b09;
+  transform: rotate(90deg);
+} */
+
+.program-topics {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  color: #b9b9b9;
+  opacity: 0.5;
+  margin-top: 5px;
+  max-width: 176px;
+}
+
+.program-topics.special {
+  margin-top: 10px;
+}
+.program-topics__item.size {
+  max-width: 40px;
+}
+.benefits-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 130%;
+
+  letter-spacing: 0.03em;
+  max-width: 60%;
+}
