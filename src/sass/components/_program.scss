@@ -7,8 +7,38 @@
   color: #ffffff;
   background: #111518;
   // background-image: url(./../images/program-img/program-img.jpg);
+  // background-repeat: no-repeat;
+  // background-position: right -56px bottom 416px;
+  // background-size: 176px 146px;
+
+  // @media screen and (min-width: 320px) and (max-width: 399px) {
+  //   background-position: right -56px bottom 416px;
+  // }
+
+  // @media screen and (min-width: 400px) and (max-width: 479px) {
+  //   background-position: right bottom 416px;
+  // }
+  // @media screen and (min-width: 480px) {
+  //   background-position: right bottom 416px;
+  // }
+}
+.program {
+  background-image: url(./../images/program-img/program-img.jpg);
   background-repeat: no-repeat;
   background-position: right -56px bottom 416px;
+  background-size: 176px 146px;
+
+  @media screen and (min-width: 320px) and (max-width: 399px) {
+    background-position: right -56px bottom;
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 479px) {
+    background-position: right bottom;
+  }
+  @media screen and (min-width: 480px) {
+    background-position: right bottom;
+    width: 480px;
+  }
 }
 .program__title {
   font-weight: 800;
@@ -136,4 +166,5 @@
 
   letter-spacing: 0.03em;
   max-width: 60%;
+  padding-left: 20px;
 }
