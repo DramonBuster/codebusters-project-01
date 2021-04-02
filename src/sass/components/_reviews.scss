@@ -1,4 +1,8 @@
 // Алексей
 .reviews {
     
+    &__button-icon {
+        width: 25px;
+        fill: $brand-color;
+    }
 }
