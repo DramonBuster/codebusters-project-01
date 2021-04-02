@@ -1,1 +1,10 @@
 // Настя
+
+.form-input:valid {
+    border-color: green;
+}
+
+
+.form-input:invalid{
+    border-color: red;
+}
