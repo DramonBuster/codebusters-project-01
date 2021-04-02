@@ -1,10 +1,27 @@
-body {
-  font-family: Montserrat, sans-serif;
-  letter-spacing: 0.08em;
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+}
+  
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-  background-color: $section-background-color;
-
-  color: $white;
+h1,
+h2,
+h3,
+h4,
+p, 
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
 }
 
 /*контейнер*/
@@ -69,3 +86,4 @@ body {
     line-height: 1.304;
   }
 }
+
