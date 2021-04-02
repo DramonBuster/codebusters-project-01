@@ -14,14 +14,14 @@
   background-color: $white;
 
   background-image: url('./../images/hero-img/hero-img.png'),
-    url('./../images/hero-img/vector-1.png');
+    url('./../images/hero-img/vector-mobile.png');
   box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
 
   /* Переопределяем путь к 2x изображению
     если плотность экрана как минимум 2 */
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url('./../images/hero-img/hero-img@2x.png'),
-      url('./../images/hero-img/vector-1.png');
+      url('./../images/hero-img/vector-mobile@2x.png');
   }
 }
 
