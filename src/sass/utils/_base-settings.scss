@@ -52,13 +52,13 @@ a {
   }
 
   @media screen and (min-width: $tablet) {
-    width: 728px;
+    width: $tablet;
   }
 
   @media screen and (min-width: $desktop) {
     padding-left: 15px;
     padding-right: 15px;
-    width: 1344px;
+    width: $desktop;
   }
 }
 
