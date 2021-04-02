@@ -11,8 +11,9 @@ body {
   border: none;
   list-style: none;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
-  
+
 img {
   display: block;
   max-width: 100%;
@@ -20,16 +21,27 @@ img {
 }
 >>>>>>> dev
 
+body {
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 0.08em;
+
+  background-color: $section-background-color;
+  color: $white;
+}
+
 h1,
 h2,
 h3,
 h4,
-p, 
+p,
 ul,
 li,
 a {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style: none;
 }
 
 /*контейнер*/
@@ -94,4 +106,3 @@ a {
     line-height: 1.304;
   }
 }
-
