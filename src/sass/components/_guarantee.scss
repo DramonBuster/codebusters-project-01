@@ -98,6 +98,9 @@ html  {
         }
     }
 
+    // &:not(:last-child) {
+    // border-left: 1px dashed tomato;
+    // }
 }
 
 .guarantee__info {
@@ -126,6 +129,9 @@ html  {
 
     }
 
+    // Вариант 1 - граница. Проблемы: невозможно спозиционировать под огонь
+    // border-left: 1px dashed tomato;
+
     &:before {
         position: absolute;
         top: 0;
@@ -137,11 +143,58 @@ html  {
         width: 15px;
         height: 20px;
 
-    //    background-image: url("./fire-mob.svg");
+        background-image: url('../images/guarantee/fire-mob.svg');
 
-        // background-color: tomato;
+        @media screen and (min-width: 1314px) {
+            width: 12px;
+            height: 10px;
+            // background-size: 100%;
+
+            // background-image: url('../images/guarantee/fire-pc.svg');  
+        }
     }
-    
+
+    // Вариант 2: псевдо-афтер: одна проблема - с 320 до 480 при отзывчивой верстке элемент не меняет размеры, 
+    // в остальных случаях делаю точки перелома
+
+    &::after {
+        position: absolute;
+        top: 25px;
+        left: 7px;
+
+        width: 1px;
+        height: 68px;
+
+        display: block;
+        content: "";
+
+        background-image: url('../images/guarantee/line-mob.svg');
+        background-repeat: no-repeat;
+        
+        // & :last-child { не работает
+        //     width: 0;
+        //     height: 0;
+        // }
+       
+
+        @media screen and (min-width: 325px) {
+            // .guarantee__info:nth-child(3) {
+                height: 51px;
+            // }
+        }
+        
+        @media screen and (min-width: 444px) {
+            height: 30px;
+        }
+
+        @media screen and (min-width: 1314px) {
+            top: 34px;
+            left: 11px;
+
+            height: 40px;            
+        }
+     
+    }
 }
 
 .guarantee__remark {
