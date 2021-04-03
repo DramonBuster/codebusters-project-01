@@ -1,100 +1,79 @@
 // Настя
-.form-registration__section{
-    background-color: $title-color;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.form-registration__section {
+  background-color: $title-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    background-image:linear-gradient(
-        to right,
-        rgba(17, 21, 24, 0.8),
-        rgba(17, 21, 24, 0.8),
-       ),
-  
-      url(./../images/contacts-img/mob_1.jpg);
+  background-image: linear-gradient(to right, rgba(17, 21, 24, 0.8), rgba(17, 21, 24, 0.8)),
+    url(./../images/contacts-img/mob_1.jpg);
 
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-            to right,
-            rgba(17, 21, 24, 0.8),
-            rgba(17, 21, 24, 0.8),
-          ),
-        url(./../images/contacts-img/mob_2@2x.jpg);
-    }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(17, 21, 24, 0.8), rgba(17, 21, 24, 0.8)),
+      url(./../images/contacts-img/mob_2@2x.jpg);
+  }
 
-    @media screen and (min-width: $tablet){
-        background-image:linear-gradient(
-        to right,
-        rgba(17, 21, 24, 0.8),
-        rgba(17, 21, 24, 0.8),
-       ),
-  
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(to right, rgba(17, 21, 24, 0.8), rgba(17, 21, 24, 0.8)),
       url(./../images/contacts-img/tab_1.jpg);
 
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-            to right,
-            rgba(17, 21, 24, 0.8),
-            rgba(17, 21, 24, 0.8),
-          ),
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(17, 21, 24, 0.8), rgba(17, 21, 24, 0.8)),
         url(./../images/contacts-img/tab_2@2x.jpg);
     }
-
-}   
+  }
 }
 
-.section__title--white{
-    color: $white;
-    font-size: 14px;
-    line-height: 1.357;
+.section__title--white {
+  color: $white;
+  font-size: 14px;
+  line-height: 1.357;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+    line-height: 1.307;
     letter-spacing: 0.03em;
-    margin-bottom: 30px;
-
-    @media screen and (min-width: $tablet){
-        font-size: 26px;
-        line-height: 1.307;
-        letter-spacing: 0.03em;
- }
+  }
 }
 
-.section__title--orange{
-    color: $brand-color; 
+.section__title--orange {
+  color: $brand-color;
 }
 
-.form-registration{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center ;
-    flex-direction: column;
-}
-.form-registration__text{
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.25;
-    letter-spacing: 0.08em;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 30px;
-
-    @media screen and (min-width: $tablet){
-        font-size: 14px;
-        line-height: 1.214;
-        margin-bottom: 40px;
- }
-}
-.form-registration__text--orange{
-    color: $brand-color;
+.form-registration {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.form-registration__label{
-    padding: 0;
-    margin: 0;
+.form-registration__text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.214;
+    margin-bottom: 40px;
+  }
+}
+
+.form-registration__text--orange {
+  color: $brand-color;
+}
+
+.form-registration__label {
+  padding: 0;
+  margin: 0;
 }
 
 .form-registration__input {
@@ -106,70 +85,43 @@
     min-width: 280px;
     border: 1px solid $white;
 
-    
-    @media screen and (min-width: $tablet){
+    @media screen and (min-width: $tablet) {
         min-width: 398px;
         margin-left: auto;
         margin-right: auto;
-     }
     }
 
-     .form-registration__input::placeholder{
+    &::placeholder {
         font-size: 14px;
         line-height: 1.214;
         color: inherit;
         border: 1px $white;
-
+        opacity: 1;
     }
 
-    .form-registration__input:valid {
+    &:valid {
         border-color: inherit;
     }
-    .form-registration__input:invalid{
-        border-color:rgb(255, 0, 0);
-    }
 
-   
-
-
-.form-registration__input--name{
-    margin-bottom: 20px;
-}
-
-.form-registration__input--tel{
-    margin-bottom: 50px;
-
-     
-    @media screen and (min-width: $tablet){
-        margin-bottom: 31px;
-     }
-}
-
-.service-button__form{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-
-    @media screen and (max-width: 319px){
-       width: 90vw; 
+    &:invalid {
+        border-color: rgb(255, 0, 0);
     }
 }
 
-
-.form-registration__input--name{
-    margin-bottom: 20px;
+.form-registration__input--name {
+  margin-bottom: 20px;
 }
 
-.form-registration__input--tel{
-    margin-bottom: 50px;
+.form-registration__input--tel {
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 31px;
+  }
 }
 
-.service-button__form{
-    margin-bottom: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.service-button__form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-
