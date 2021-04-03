@@ -1,4 +1,15 @@
 // Настя
+.form-registration__section{
+    @media screen and (min-width: $tablet) {
+        padding-bottom: 71px;
+      }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 100px;
+        padding-bottom: 50px;
+      }
+}
+
 .form-registration__section {
   background-color: $title-color;
   background-repeat: no-repeat;
@@ -22,22 +33,48 @@
       background-image: linear-gradient(to right, rgba(17, 21, 24, 0.8), rgba(17, 21, 24, 0.8)),
         url(./../images/contacts-img/tab_2@2x.jpg);
     }
+     @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(to right, rgba(17, 21, 24, 0.8), rgba(17, 21, 24, 0.8)),
+      url(./../images/contacts-img/desktop_1.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(17, 21, 24, 0.8), rgba(17, 21, 24, 0.8)),
+        url(./../images/contacts-img/desktop_2@2x.jpg);
+      }
+    }
   }
 }
-
 .section__title--white {
-  color: $white;
-  font-size: 14px;
-  line-height: 1.357;
-  letter-spacing: 0.03em;
-  margin-bottom: 30px;
+    color: $white;
+    font-size: 14px;
+    line-height: 1.357;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+    letter-spacing: 0.03em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+
+  @media screen and (min-width: $mobile) {
+    width: 280px;
+  }
 
   @media screen and (min-width: $tablet) {
     font-size: 26px;
     line-height: 1.307;
-    letter-spacing: 0.03em;
+    width: 688px;
   }
-}
+  
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.304;
+    width: 1090px;
+    margin-bottom: 50px;
+       }
+     }
+   
+ 
+
 
 .section__title--orange {
   color: $brand-color;
@@ -59,13 +96,29 @@
   display: inline-block;
   text-align: center;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+
+  @media screen and (min-width: $mobile) {
+    width: 280px;
+  }
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
     line-height: 1.214;
     margin-bottom: 40px;
+    width: 688px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 1.233;
+    margin-bottom: 56px;
+    width: 1090px;
   }
 }
+
 
 .form-registration__text--orange {
   color: $brand-color;
@@ -82,24 +135,39 @@
     padding-top: 15px;
     padding-left: 28px;
     padding-bottom: 16px;
-    // 1
-    min-width: 280px;
+    width: 280px;
+    letter-spacing: 0.08em;
     border: 1px solid $white;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $mobile) {
+      width: 280px;
+    }
 
     @media screen and (min-width: $tablet) {
-        min-width: 398px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 398px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 478px;
+        padding-top: 23px;
+        padding-left: 40px;
+        padding-bottom: 23px;
     }
 
     &::placeholder {
-    // 1
         font-size: 14px;
         line-height: 1.214;
         color: inherit;
         border: 1px $white;
         opacity: 1;
-    // 2
+
+        @media screen and (min-width: $desktop) {
+         font-size: 20px;
+         line-height: 1.2;
+         letter-spacing: 0.08em;
+      }
     }
 
     &:valid {
@@ -111,10 +179,12 @@
     }
 }
 
-// 2
-
 .form-registration__input--name {
   margin-bottom: 20px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 30px;
+  }
 }
 
 .form-registration__input--tel {
@@ -123,10 +193,22 @@
   @media screen and (min-width: $tablet) {
     margin-bottom: 31px;
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 80px;
+  }
 }
 
 .service-button__form {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: $desktop) {
+   width: 354px;
+   height: 70px;
+   font-size: 14px;
+   line-height: 1.214;
+   letter-spacing: 0.14em;
+  }
 }
