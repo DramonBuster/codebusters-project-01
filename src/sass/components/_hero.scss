@@ -33,12 +33,31 @@
 
     background-image: url('./../images/hero-img/hero-img.png'),
       url('./../images/hero-img/vector-tablet.png');
-  }
-  /* Переопределяем путь к 2x изображению
+
+    /* Переопределяем путь к 2x изображению
     если плотность экрана как минимум 2 */
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('./../images/hero-img/hero-img@2x.png'),
-      url('./../images/hero-img/vector-tablet@2x.png');
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('./../images/hero-img/hero-img@2x.png'),
+        url('./../images/hero-img/vector-tablet@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1688px;
+    min-height: 878px;
+
+    background-size: 843px 720px, 1688px 922px;
+    background-position: top 150px right -15%, 0 0;
+
+    background-image: url('./../images/hero-img/hero-img.png'),
+      url('./../images/hero-img/vector-desktop.png');
+
+    /* Переопределяем путь к 2x изображению
+    если плотность экрана как минимум 2 */
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('./../images/hero-img/hero-img@2x.png'),
+        url('./../images/hero-img/vector-desktop@2x.png');
+    }
   }
 }
 
@@ -49,6 +68,12 @@
     padding-top: 158px;
     padding-left: 22px;
     padding-right: 445px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 228px;
+    padding-left: 0;
+    padding-right: 660px;
   }
 }
 
@@ -69,12 +94,21 @@
     font-size: 26px;
     line-height: 1.308;
   }
+
+  @media screen and (min-width: $desktop) {
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 1.293;
+  }
 }
 
 .hero__text {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
   margin-bottom: 30px;
+
+  width: 280px;
 
   font-weight: 500;
   font-size: 14px;
@@ -96,6 +130,10 @@
   &--orange {
     font-weight: 700;
     color: $brand-color;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 536px;
   }
 }
 
