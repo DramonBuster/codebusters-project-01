@@ -24,7 +24,7 @@ html  {
 
 
 .guarantee {
-  background-color: #ffffff;
+  background-color: $white;
 
 }
 
@@ -50,7 +50,7 @@ html  {
     }
 }
 
-.guarantee__header {
+.guarantee__title {
     margin: 0 0 30px 0;
 
     font-size: 26px;
@@ -58,8 +58,7 @@ html  {
     line-height: 1.3;
     letter-spacing: 0.03em;
 
-    color: #111518;
-    // $title-color
+    color: $title-color;
 
     text-align: center;
 
@@ -73,8 +72,7 @@ html  {
 .guarantee__list {
     padding: 30px 20px 31px 20px;
 
-    background-color: #F1F1F1;
-    // $guarantee-section-background-color
+    background-color: $guarantee-section-background-color;
 
     @media screen and (min-width: 768px) {
         padding: 30px 50px 30px 79px;
@@ -114,8 +112,7 @@ html  {
     line-height: 1.67;
     letter-spacing: 0;
 
-    color: #3D3D3D;
-    // $secondary-text-color
+    color: $secondary-text-color;
 
     @media screen and (min-width: 768px) {
         padding-left: 39px;
@@ -143,14 +140,13 @@ html  {
         width: 15px;
         height: 20px;
 
-        background-image: url('../images/guarantee/fire-mob.svg');
+        background-image: url('../images/guarantee/fire.svg');
 
         @media screen and (min-width: 1314px) {
-            width: 12px;
-            height: 10px;
-            // background-size: 100%;
+            width: 22px;
+            height: 30px;
 
-            // background-image: url('../images/guarantee/fire-pc.svg');  
+            background-size: 100%;
         }
     }
 
@@ -168,7 +164,7 @@ html  {
         display: block;
         content: "";
 
-        background-image: url('../images/guarantee/line-mob.svg');
+        background-image: url('../images/guarantee/line.svg');
         background-repeat: no-repeat;
         
         // & :last-child { не работает
@@ -198,26 +194,5 @@ html  {
 }
 
 .guarantee__remark {
- color: #FF6B09;
-    //  $brand-color
-}
-
-.guarantee__svg {
-    position: absolute;
-
-    top: 0;
-    left: 0%;
-}
-
-.guarantee__svg::before {
-
-    display: inline-block;
-    content: "";
-    width: 40px;
-    height: 20px;
-
-    background-color: tomato;
-
-    color: #B9B9B9;
-    // $primary-text-color
+ color: $brand-color;
 }
