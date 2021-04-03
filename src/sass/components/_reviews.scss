@@ -93,6 +93,7 @@
     @media screen and (min-width: $tablet) {
       flex-direction: row;
       padding: 40px;
+      text-align: start;
     }
 
     @media screen and (min-width: $desktop) {
