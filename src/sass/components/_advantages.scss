@@ -1,1 +1,113 @@
-// Маша
+.advantages {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.429;
+
+  color: $title-color;
+  background-color: $white;
+}
+.advantages__list {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: calc(-1 * 20px);
+    margin-left: calc(-1 * 20px);
+  }
+}
+.advantages__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 59px;
+    height: 60px;
+    margin-right: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media screen and (min-width: $desktop) {
+      width: 100px;
+      height: 102px;
+      margin-right: -18px;
+    }
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 3 - 20px);
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+.advantage-subtitle {
+  font-size: 14px;
+  flex-basis: calc(100% - 40%);
+  /*width: 160px;*/
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.65;
+    flex-basis: calc(100% - 20%);
+  }
+}
+
+.advantage-subtitle--method {
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% - 40%);
+  }
+}
+
+.advantages__item--icon-female::before {
+  background-image: url('./../images/hero-img/rectangle.svg'),
+    url('./../images/hero-img/female-student.svg');
+  background-size: 59px 60px, 33px 40px;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('./../images/hero-img/rectangle-desktop.svg'),
+      url('./../images/hero-img/female-student-desktop.svg');
+    background-size: 100px 102px, 40px 48px;
+  }
+}
+
+.advantages__item--icon-mobile::before {
+  background-image: url('./../images/hero-img/rectangle.svg'),
+    url('./../images/hero-img/mobile-learning.svg');
+  background-size: 59px 60px, 42px 41px;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('./../images/hero-img/rectangle-desktop.svg'),
+      url('./../images/hero-img/mobile-learning-desktop.svg');
+    background-size: 100px 102px, 48px 47px;
+  }
+}
+
+.advantages__item--icon-insurance::before {
+  background-image: url('./../images/hero-img/rectangle.svg'),
+    url('./../images/hero-img/insurance.svg');
+  background-size: 59px 60px, 35px 40px;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('./../images/hero-img/rectangle-desktop.svg'),
+      url('./../images/hero-img/insurance-desktop.svg');
+    background-size: 100px 102px, 42px 48px;
+  }
+}
