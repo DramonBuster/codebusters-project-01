@@ -6,6 +6,9 @@
     $title-color 79%,
     $white 21%
   );
+  
+  // Позиционирование
+  position: relative;
     
   @media screen and (min-width: $tablet) {
     padding-top: 60px;
