@@ -1,1 +1,166 @@
-// Маша
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 480px;
+  min-height: 618px;
+
+  letter-spacing: 0.06em;
+  text-align: left;
+
+  background-size: 208px 178px, 100% 665px;
+  background-position: 50% 394px, 0 0;
+  background-repeat: no-repeat;
+  background-color: $white;
+
+  background-image: url('./../images/hero-img/hero-img.png'),
+    url('./../images/hero-img/vector-mobile.png');
+  box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
+
+  /* Переопределяем путь к 2x изображению
+    если плотность экрана как минимум 2 */
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('./../images/hero-img/hero-img@2x.png'),
+      url('./../images/hero-img/vector-mobile@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    min-height: 557px;
+
+    background-size: 376px 321px, 100% 605px;
+    background-position: 374px 171px, 0 0;
+
+    background-image: url('./../images/hero-img/hero-img.png'),
+      url('./../images/hero-img/vector-tablet.png');
+
+    /* Переопределяем путь к 2x изображению
+    если плотность экрана как минимум 2 */
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('./../images/hero-img/hero-img@2x.png'),
+        url('./../images/hero-img/vector-tablet@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1688px;
+    min-height: 878px;
+
+    background-size: 843px 720px, 100% 922px;
+    background-position: top 150px right -15%, 0 0;
+
+    background-image: url('./../images/hero-img/hero-img.png'),
+      url('./../images/hero-img/vector-desktop.png');
+
+    /* Переопределяем путь к 2x изображению
+    если плотность экрана как минимум 2 */
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('./../images/hero-img/hero-img@2x.png'),
+        url('./../images/hero-img/vector-desktop@2x.png');
+    }
+  }
+}
+
+.hero__content {
+  padding-top: 110px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 158px;
+    padding-left: 22px;
+    padding-right: 445px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 228px;
+    padding-left: 0;
+    padding-right: 660px;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+
+  color: $title-color;
+
+  @media screen and (min-width: $tablet) {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.308;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 1.293;
+  }
+}
+
+.hero__text {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 30px;
+
+  width: 280px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.571;
+  letter-spacing: 0.08em;
+
+  color: $primary-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+
+  &--black {
+    font-weight: 700;
+    color: $title-color;
+  }
+
+  &--orange {
+    font-weight: 700;
+    color: $brand-color;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 536px;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__service-button {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+
+  align-items: center;
+  text-align: center;
+  padding: 16px 9px;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 354px;
+    height: 70px;
+    padding: 27px 26px 25px 25px;
+
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
