@@ -25,7 +25,6 @@ html  {
 
 .guarantee {
   background-color: $white;
-
 }
 
 .guarantee__container {
@@ -84,7 +83,7 @@ html  {
 }
 
 .guarantee__item {
-    // position: relative;
+    position: relative;
 
     &:not(:last-child) {
         margin-bottom: 23px;
@@ -96,14 +95,71 @@ html  {
         }
     }
 
+    // Вариант 1 - граница. Проблемы: невозможно спозиционировать под огонь, но размер автоматически меняется
     // &:not(:last-child) {
     // border-left: 1px dashed tomato;
     // }
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        content: "";
+
+        width: 15px;
+        height: 20px;
+
+        background-image: url('../images/guarantee/fire.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media screen and (min-width: 1314px) {
+            width: 22px;
+            height: 30px;
+        }
+    }
+    
+    // // Вариант 2: псевдо-афтер: одна проблема - с 320 до 480 при отзывчивой верстке элемент не меняет размеры, 
+    // // в остальных случаях делаю точки перелома. Так же если задать бордер афтеру, тоже не меняется размер
+
+    &:not(:last-child)::after {
+        position: absolute;
+
+        display: block;
+        content: "";
+
+        width: 1px;
+        height: 68px;
+
+        background-image: url('../images/guarantee/line.svg');
+        background-repeat: no-repeat;
+
+        top: 25px;
+        left: 7px;
+
+        @media screen and (min-width: 325px) {
+            // не работает ... синтаксис?
+            .guarantee__item:nth-child(3)::after {
+                height: 51px;
+            }
+        }
+        
+        @media screen and (min-width: 444px) {
+            height: 30px;
+        }
+
+        @media screen and (min-width: 1314px) {
+            top: 34px;
+            left: 11px;
+
+            height: 40px;            
+        }
+    }
 }
 
 .guarantee__info {
-    position: relative;
-
     margin: 0;
     padding-left: 35px;
 
@@ -123,76 +179,9 @@ html  {
 
         font-size: 20px;
         line-height: 1.4;
-
-    }
-
-    // Вариант 1 - граница. Проблемы: невозможно спозиционировать под огонь
-    // border-left: 1px dashed tomato;
-
-    &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        display: block;
-        content: "";
-
-        width: 15px;
-        height: 20px;
-
-        background-image: url('../images/guarantee/fire.svg');
-
-        @media screen and (min-width: 1314px) {
-            width: 22px;
-            height: 30px;
-
-            background-size: 100%;
-        }
-    }
-
-    // Вариант 2: псевдо-афтер: одна проблема - с 320 до 480 при отзывчивой верстке элемент не меняет размеры, 
-    // в остальных случаях делаю точки перелома
-
-    &::after {
-        position: absolute;
-        top: 25px;
-        left: 7px;
-
-        width: 1px;
-        height: 68px;
-
-        display: block;
-        content: "";
-
-        background-image: url('../images/guarantee/line.svg');
-        background-repeat: no-repeat;
-        
-        // & :last-child { не работает
-        //     width: 0;
-        //     height: 0;
-        // }
-       
-
-        @media screen and (min-width: 325px) {
-            // .guarantee__info:nth-child(3) {
-                height: 51px;
-            // }
-        }
-        
-        @media screen and (min-width: 444px) {
-            height: 30px;
-        }
-
-        @media screen and (min-width: 1314px) {
-            top: 34px;
-            left: 11px;
-
-            height: 40px;            
-        }
-     
     }
 }
 
 .guarantee__remark {
- color: $brand-color;
+    color: $brand-color;
 }
