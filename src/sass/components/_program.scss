@@ -3,6 +3,7 @@
 .program-section {
   color: $white;
   background-color: $title-color;
+  position: relative;
 
   @media screen and (min-width: $desktop) {
     position: relative;

@@ -4,8 +4,15 @@
   padding-top: 0;
   padding-bottom: 0;
   background-color: transparent;
-  position: relative;
+  position: absolute;
+  top: 73%;
+  left: 0;
+  right: 0;
+
+  @media screen and (min-width: $tablet) {
+    top: 85%;
   }
+}
 
 .benefits__title {
   margin-top: 0;
@@ -18,7 +25,6 @@
   letter-spacing: 0.03em;
   
   color: $white;
-  background-color: black;
   
   @media screen and (min-width: $tablet) {
     width: 100%;
@@ -38,8 +44,8 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-    }
   }
+}
   
 .benefits__container {
   padding: 20px 30px;
