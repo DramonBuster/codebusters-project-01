@@ -1,15 +1,19 @@
 // Алина
 .problems {
   max-height: 840px;
-  padding-bottom: 0px;
   background-image: linear-gradient(
     to bottom,
-    $title-color 70%,
-    $white 30%
+    $title-color 79%,
+    $white 21%
   );
     
   @media screen and (min-width: $tablet) {
     padding-top: 60px;
+    background-image: linear-gradient(
+    to bottom,
+    $title-color 63%,
+    $white 37%
+  );
   }
 
   @media screen and (min-width: $desktop) {
@@ -22,7 +26,7 @@
   );
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-position-y: 30%;
+    background-position-y: 29%;
   }
 }
 
@@ -32,7 +36,7 @@
 
   font-weight: 800;
   font-size: 20px;
-  line-height: 1.3;
+  line-height: 1.35;
   letter-spacing: 0.03em;
 
   color: $white;
@@ -109,6 +113,9 @@
     display: block;
     counter-increment: section;
     content: "— 0" counter(section) " ";
+    margin-bottom: 5px;
+
+    line-height: 1.21;
 
     color: $brand-color;
   }
@@ -126,5 +133,9 @@
   @media screen and (min-width: $desktop) {
     font-size: 20px;
     line-height: 1.2;
+
+    &::before {
+      margin-bottom: 10px;
+    }
   }
 }
