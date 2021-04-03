@@ -1,23 +1,23 @@
 // Антон
-.section__title.section__title--about {
+.section__title--about {
     text-align: left;
 }
 
-.section__title.section__title--sub-title {
+.section__title--sub-title {
     margin: 0;
     padding: 0;
     line-height: 1.2;
     letter-spacing: 0.08em;
     text-align: left;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     @media (min-width: $desktop) {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
         font-size: 30px;
         line-height: 1.233;
     }
 }
 
-.section__title.section__title--sub-title::after {
+.section__title--sub-title::after {
     content: '';
     display: block;
     width: 100%;
@@ -74,7 +74,7 @@
 }
 
 .skills__item:not(:last-child) {
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .skills__item::before {
@@ -136,7 +136,7 @@
 }
 
 .education__item:not(:last-child) {
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .education__text {
