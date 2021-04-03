@@ -36,6 +36,11 @@
 
     background-repeat: no-repeat;
     background-position: center;
+
+    @media screen and (min-width: $desktop) {
+      width: 100px;
+      height: 102px;
+    }
   }
 
   &:not(:last-child) {
@@ -61,16 +66,34 @@
   background-image: url('./../images/hero-img/rectangle.svg'),
     url('./../images/hero-img/female-student.svg');
   background-size: 59px 60px, 33px 40px;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('./../images/hero-img/rectangle-desktop.svg'),
+      url('./../images/hero-img/female-student-desktop.svg');
+    background-size: 100px 102px, 40px 48px;
+  }
 }
 
 .advantages__item--icon-mobile::before {
-  background-image: url('./../images/hero-img/rectangle.svg'),
+  background-image: url('./../images/hero-img/rectangle-desktop.svg'),
     url('./../images/hero-img/mobile-learning.svg');
   background-size: 59px 60px, 42px 41px;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('./../images/hero-img/rectangle.svg'),
+      url('./../images/hero-img/mobile-learning-desktop.svg');
+    background-size: 100px 102px, 48px 47px;
+  }
 }
 
 .advantages__item--icon-insurance::before {
-  background-image: url('./../images/hero-img/rectangle.svg'),
+  background-image: url('./../images/hero-img/rectangle-desktop.svg'),
     url('./../images/hero-img/insurance.svg');
   background-size: 59px 60px, 35px 40px;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('./../images/hero-img/rectangle.svg'),
+      url('./../images/hero-img/insurance-desktop.svg');
+    background-size: 100px 102px, 42px 48px;
+  }
 }
