@@ -139,11 +139,16 @@ html  {
         top: 25px;
         left: 7px;
 
+        // Это тестовый блок, его еще буду править - НАЧАЛО
         @media screen and (min-width: 325px) {
             // не работает ... синтаксис?
             .guarantee__item:nth-child(3)::after {
                 height: 51px;
             }
+        }
+
+        @media screen and (min-width: 340px) {
+            height: 51px;
         }
         
         @media screen and (min-width: 444px) {
@@ -156,6 +161,7 @@ html  {
 
             height: 40px;            
         }
+        // Это тестовый блок, его еще буду править - КОНЕЦ
     }
 }
 
