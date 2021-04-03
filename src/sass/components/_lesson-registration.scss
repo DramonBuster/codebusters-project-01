@@ -51,26 +51,29 @@
     letter-spacing: 0.03em;
     margin-bottom: 30px;
     letter-spacing: 0.03em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
 
-   @media screen and (max-width: 480px) {
-    min-width: 280px;
+  @media screen and (min-width: $mobile) {
+    width: 280px;
+  }
 
   @media screen and (min-width: $tablet) {
     font-size: 26px;
     line-height: 1.307;
-    // width: 688px;
+    width: 688px;
+  }
   
   @media screen and (min-width: $desktop) {
     font-size: 46px;
     line-height: 1.304;
-    max-width: 1090px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 1090px;
     margin-bottom: 50px;
        }
      }
-   }
- }
+   
+ 
 
 
 .section__title--orange {
@@ -93,19 +96,29 @@
   display: inline-block;
   text-align: center;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+
+  @media screen and (min-width: $mobile) {
+    width: 280px;
+  }
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
     line-height: 1.214;
     margin-bottom: 40px;
+    width: 688px;
   }
 
   @media screen and (min-width: $desktop) {
     font-size: 30px;
     line-height: 1.233;
     margin-bottom: 56px;
+    width: 1090px;
   }
 }
+
 
 .form-registration__text--orange {
   color: $brand-color;
@@ -122,22 +135,25 @@
     padding-top: 15px;
     padding-left: 28px;
     padding-bottom: 16px;
-    min-width: 280px;
+    width: 280px;
+    letter-spacing: 0.08em;
     border: 1px solid $white;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $mobile) {
+      width: 280px;
+    }
 
     @media screen and (min-width: $tablet) {
-        min-width: 398px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 398px;
     }
 
     @media screen and (min-width: $desktop) {
-        min-width: 478px;
+        width: 478px;
         padding-top: 23px;
         padding-left: 40px;
         padding-bottom: 23px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     &::placeholder {
@@ -146,6 +162,12 @@
         color: inherit;
         border: 1px $white;
         opacity: 1;
+
+        @media screen and (min-width: $desktop) {
+         font-size: 20px;
+         line-height: 1.2;
+         letter-spacing: 0.08em;
+      }
     }
 
     &:valid {
