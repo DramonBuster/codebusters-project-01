@@ -5,15 +5,12 @@
   background-color: $title-color;
   position: relative;
 
-  @media screen and (min-width: $desktop) {
-    position: relative;
-  }
-}
-.program-container {
   padding-top: 58px;
   padding-bottom: 537px;
 
-  color: $white;
+  // @media screen and (min-width: $desktop) {
+  //   position: relative;
+  // }
 
   background-image: url(./../images/program-img/program-img.png);
   background-repeat: no-repeat;
@@ -41,13 +38,11 @@
     width: 768px;
     background-position: right bottom 240px;
 
-    padding-left: 40px;
     padding-bottom: 392px;
   }
   @media screen and (min-width: $desktop) {
     display: block;
-    padding-left: 183px;
-    padding-right: 140px;
+
     padding-top: 120px;
     padding-bottom: 363px;
     width: 100%;
@@ -55,19 +50,20 @@
 
   @media screen and (min-width: $desktop) {
     background-size: 760px 502px;
-    background-position: left -160px bottom 165px;
+    background-position: left -255px bottom 115px;
     margin-bottom: 25px;
   }
   @media screen and (min-width: 1500px) {
     background-size: 760px 502px;
-    background-position: left -140px bottom 107px;
+    background-position: left -240px bottom 115px;
   }
 
   @media screen and (min-width: 1600px) {
     background-size: 760px 502px;
-    background-position: left -78px bottom 168px;
+    background-position: left -150px bottom 110px;
   }
 }
+
 .program__title {
   font-weight: 800;
   font-size: 20px;
@@ -164,7 +160,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    width: 240px;
+    // width: 240px;
   }
 }
 
@@ -240,7 +236,7 @@
   @media screen and (min-width: $desktop) {
     margin-right: 0;
     margin-left: 0;
-    min-width: 200px;
+    min-width: 240px;
 
     &:not(:first-child) {
       margin-left: 0;
@@ -271,6 +267,6 @@
   }
 }
 
-.program-topics--special {
+.program-topics--indent {
   margin-top: 10px;
 }
