@@ -1,15 +1,14 @@
 // Настя
 .section__footer{
     padding: 0;
-    background: linear-gradient(to bottom, $white  72%, $title-color 28%);
+    background: linear-gradient(to bottom, $white  180px, $title-color 70px);
 
-    
     @media screen and (min-width: $tablet) {
-      background: linear-gradient(to bottom, $white  64%, $title-color 36%);
-    }
+      background: linear-gradient(to bottom, $white 125px, $title-color 70px);
+   }
 
     @media screen and (min-width: $desktop) {
-      background: linear-gradient(to bottom, $white  65%, $title-color 35%);
+      background: linear-gradient(to bottom, $white 150px, $title-color 70px);
    }
 }
 
@@ -19,7 +18,7 @@
     @media screen and (min-width: $tablet) {
        display: flex;
        align-items: baseline;
-       height: 126px;
+      //  height: 126px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -65,7 +64,6 @@
      font-size: 30px;
  }
 }
-
 
 .footer-list__icon--tel{
   width: 20px;
