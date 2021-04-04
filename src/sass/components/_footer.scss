@@ -18,7 +18,7 @@
     @media screen and (min-width: $tablet) {
        display: flex;
        align-items: baseline;
-       height: 126px;
+      //  height: 126px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -64,7 +64,6 @@
      font-size: 30px;
  }
 }
-
 
 .footer-list__icon--tel{
   width: 20px;
