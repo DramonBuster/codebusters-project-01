@@ -39,11 +39,11 @@
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 1688px;
-    min-height: 878px;
+    max-width: 1680px;
+    min-height: 922px;
 
-    background-size: /*843px 720px,*/ 100% 922px;
-    background-position: /*top 150px right -15%,*/ 0 0;
+    background-size: /*843px 720px,*/ 1680px 922px;
+    background-position: /*top 150px right -15%,*/ center;
 
     background-image: /*url('./../images/hero-img/hero-img.png'),*/ url('./../images/hero-img/vector-desktop.png');
 
