@@ -3,12 +3,13 @@
 .program-section {
   color: $white;
   background-color: $title-color;
+  position: relative;
 
   @media screen and (min-width: $desktop) {
     position: relative;
   }
 }
-.program {
+.program-container {
   padding-top: 58px;
   padding-bottom: 537px;
 
@@ -50,12 +51,11 @@
     padding-top: 120px;
     padding-bottom: 363px;
     width: 100%;
-    // margin: 0;
   }
 
   @media screen and (min-width: $desktop) {
     background-size: 760px 502px;
-    background-position: left -200px bottom 165px;
+    background-position: left -160px bottom 165px;
     margin-bottom: 25px;
   }
   @media screen and (min-width: 1500px) {
@@ -65,7 +65,7 @@
 
   @media screen and (min-width: 1600px) {
     background-size: 760px 502px;
-    background-position: left -78px bottom 85px;
+    background-position: left -78px bottom 168px;
   }
 }
 .program__title {
@@ -83,12 +83,12 @@
     @media screen and (min-width: $desktop) {
       font-size: 46px;
       line-height: 1.304;
-      // letter-spacing: 0.03em;
+      letter-spacing: 0.03em;
       margin-bottom: 160px;
     }
   }
 }
-.program__container {
+.program__wrapper {
   padding-left: 86px;
   display: flex;
   padding-top: 43px;
@@ -127,7 +127,7 @@
   font-size: 14px;
   line-height: 28px;
   letter-spacing: 0.08em;
-  // outline: 0.5px solid $white;
+
   max-width: 100%;
 
   @media screen and (max-width: 767px) {
@@ -170,8 +170,8 @@
 
 .program-list__item::before {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   content: ' ';
   background-color: $brand-color;
   border-radius: 50%;
@@ -179,15 +179,15 @@
 
   @media screen and (max-width: 767px) {
     top: 7px;
-    left: -32.5px;
+    left: -33px;
   }
   @media screen and (min-width: $tablet) {
     top: 7px;
     left: -62.5px;
   }
   @media screen and (min-width: $desktop) {
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
     top: -70px;
     left: 0;
   }
@@ -214,27 +214,37 @@
 }
 
 .program-course__item {
-}
-.program-course__item:not(:first-child) {
-  @media screen and (min-width: $tablet) {
-    margin-left: 50px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin: 0;
-  }
-}
-.program-course__item:not(:last-child) {
   @media screen and (max-width: 767px) {
-    margin-bottom: 8px;
-    max-width: 176px;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+      max-width: 176px;
+    }
   }
   @media screen and (min-width: $tablet) {
-    margin-bottom: 0;
-    width: 176px;
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(1) {
+      width: 176px;
+    }
+    &:nth-child(2) {
+      width: 155px;
+    }
   }
+
   @media screen and (min-width: $desktop) {
-    max-width: 280px;
-    margin-bottom: 25px;
+    margin-right: 0;
+    margin-left: 0;
+    min-width: 200px;
+
+    &:not(:first-child) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -253,6 +263,7 @@
     letter-spacing: 0.08em;
 
     margin-top: 10px;
+    margin-bottom: 25px;
   }
 
   &__item--size {
@@ -260,9 +271,6 @@
   }
 }
 
-.program-topics.special {
+.program-topics--special {
   margin-top: 10px;
 }
-// .program-topics__item.size {
-//   max-width: 80px;
-// }
