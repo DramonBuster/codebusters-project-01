@@ -1,12 +1,11 @@
 .advantages {
-  padding-top: 30px;
-  padding-bottom: 50px;
+  /*padding-top: 30px;*/
+  /*padding-bottom: 50px;*/
   font-weight: 700;
   font-size: 14px;
   line-height: 1.429;
 
   color: $title-color;
-  background-color: $white;
 }
 .advantages__list {
   text-decoration: none;
@@ -55,6 +54,7 @@
     flex-basis: calc(100% / 3 - 20px);
     margin-top: 20px;
     margin-left: 20px;
+    justify-content: left;
   }
 }
 

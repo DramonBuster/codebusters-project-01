@@ -1,6 +1,7 @@
 .hero {
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 50px;
 
   max-width: 480px;
   min-height: 618px;
@@ -41,9 +42,10 @@
   @media screen and (min-width: $desktop) {
     max-width: 1680px;
     min-height: 922px;
+    padding-bottom: 130px;
 
     background-size: /*843px 720px,*/ 1680px 922px;
-    background-position: /*top 150px right -15%,*/ center;
+    background-position: /*top 150px right -15%,*/ center 0;
 
     background-image: /*url('./../images/hero-img/hero-img.png'),*/ url('./../images/hero-img/vector-desktop.png');
 
@@ -56,8 +58,23 @@
 }
 
 .hero__wrapper {
+  margin-bottom: 77px;
+
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 110px;
+  }
+
   @media screen and (min-width: $tablet) {
     display: flex;
+    margin-bottom: 115px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 200px;
+  }
+
+  @media screen and (min-width: 1618px) {
+    margin-bottom: 107px;
   }
 }
 .hero__content {
