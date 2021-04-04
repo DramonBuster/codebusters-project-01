@@ -1,12 +1,9 @@
 .advantages {
-  padding-top: 30px;
-  padding-bottom: 50px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.429;
 
   color: $title-color;
-  background-color: $white;
 }
 .advantages__list {
   text-decoration: none;
@@ -55,6 +52,7 @@
     flex-basis: calc(100% / 3 - 20px);
     margin-top: 20px;
     margin-left: 20px;
+    justify-content: left;
   }
 }
 
@@ -85,6 +83,7 @@
     background-image: url('./../images/hero-img/rectangle-desktop.svg'),
       url('./../images/hero-img/female-student-desktop.svg');
     background-size: 100px 102px, 40px 48px;
+    background-position: center, 25px center;
   }
 }
 
@@ -97,6 +96,7 @@
     background-image: url('./../images/hero-img/rectangle-desktop.svg'),
       url('./../images/hero-img/mobile-learning-desktop.svg');
     background-size: 100px 102px, 48px 47px;
+    background-position: center, 22px center;
   }
 }
 
@@ -109,5 +109,6 @@
     background-image: url('./../images/hero-img/rectangle-desktop.svg'),
       url('./../images/hero-img/insurance-desktop.svg');
     background-size: 100px 102px, 42px 48px;
+    background-position: center, 24px center;
   }
 }
