@@ -87,15 +87,13 @@
 
   @media screen and (min-width: $tablet) {
     padding-top: 158px;
-    padding-left: 22px;
     margin-bottom: 0;
-    margin-right: 55px;
+    margin-right: 57px;
   }
 
   @media screen and (min-width: $desktop) {
     margin-right: 0;
     padding-top: 228px;
-    padding-left: 0;
   }
 }
 
@@ -202,11 +200,11 @@
   @media screen and (min-width: $tablet) {
     margin: 0;
     padding-top: 158px;
-    width: 354px;
+    width: 374px;
     height: auto;
   }
 
-  @media screen and (min-width: 812px) {
+  @media screen and (min-width: 770px) {
     width: 376px;
   }
 
@@ -215,7 +213,7 @@
     width: 705px;
   }
 
-  @media screen and (min-width: 1618px) {
+  @media screen and (min-width: 1480px) {
     width: 842px;
   }
 }

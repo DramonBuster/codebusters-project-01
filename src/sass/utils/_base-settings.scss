@@ -55,11 +55,17 @@ a {
   @media screen and (min-width: $tablet) {
     width: $tablet;
   }
+  @media screen and (min-width: 770px) {
+    width: 770px;
+  }
 
   @media screen and (min-width: $desktop) {
     padding-left: 15px;
     padding-right: 15px;
     width: $desktop;
+  }
+  @media screen and (min-width: 1480px) {
+    width: 1480px;
   }
 }
 
