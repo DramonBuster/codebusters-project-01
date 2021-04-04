@@ -54,6 +54,8 @@ a {
 
   @media screen and (min-width: $tablet) {
     width: $tablet;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   // @media screen and (min-width: 770px) {
@@ -65,7 +67,7 @@ a {
     padding-right: 15px;
     width: $desktop;
   }
-  
+
   // @media screen and (min-width: 1480px) {
   //   width: 1480px;
   // }
