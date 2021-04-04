@@ -94,11 +94,6 @@ img {
     }
   }
 
-  // Вариант 1 - граница. Проблемы: невозможно спозиционировать под огонь, но размер автоматически меняется
-  // &:not(:last-child) {
-  // border-left: 1px dashed tomato;
-  // }
-
   &:before {
     position: absolute;
     top: 0;
@@ -120,9 +115,6 @@ img {
     }
   }
 
-  // // Вариант 2: псевдо-афтер: одна проблема - с 320 до 480 при отзывчивой верстке элемент не меняет размеры,
-  // // в остальных случаях делаю точки перелома. Так же если задать бордер афтеру, тоже не меняется размер
-
   &:not(:last-child)::after {
     position: absolute;
 
@@ -138,29 +130,43 @@ img {
     top: 25px;
     left: 7px;
 
-    // Это тестовый блок, его еще буду править - НАЧАЛО
-    @media screen and (min-width: 325px) {
-      // не работает ... синтаксис?
-      .guarantee__item:nth-child(3)::after {
-        height: 51px;
-      }
-    }
-
-    @media screen and (min-width: 340px) {
-      height: 51px;
-    }
-
-    @media screen and (min-width: 444px) {
-      height: 30px;
-    }
-
     @media screen and (min-width: $desktop) {
       top: 34px;
       left: 11px;
 
       height: 40px;
     }
-    // Это тестовый блок, его еще буду править - КОНЕЦ
+  }
+
+  // Костыль - решение проблемы с высотой пунктирной линии от огня к огню
+  &:nth-child(1)::after {
+    @media screen and (min-width: 340px) {
+      height: 51px;      
+    }
+
+    @media screen and (min-width: 453px) {
+      height: 30px;
+    }
+  }
+
+  &:nth-child(2)::after {
+    @media screen and (min-width: 348px) {
+      height: 51px;
+    }
+
+    @media screen and (min-width: 449px) {
+      height: 30px;
+    }
+  }
+
+  &:nth-child(3)::after {
+    @media screen and (min-width: 325px) {
+      height: 51px;
+    }
+
+    @media screen and (min-width: 444px) {
+      height: 30px;
+    }
   }
 }
 
