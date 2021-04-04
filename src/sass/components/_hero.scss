@@ -72,9 +72,9 @@
   }
 
   @media screen and (min-width: $desktop) {
+    margin-right: 0;
     padding-top: 228px;
     padding-left: 0;
-    padding-right: 660px;
   }
 }
 
@@ -181,7 +181,16 @@
     height: auto;
   }
 
-  @media screen and (min-width: 790px) {
+  @media screen and (min-width: 812px) {
     width: 376px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 150px;
+    width: 705px;
+  }
+
+  @media screen and (min-width: 1618px) {
+    width: 842px;
   }
 }
