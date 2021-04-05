@@ -1,181 +1,172 @@
 // Юля
 
-// html  {
-//     box-sizing: border-box;
-//   }
-    
-//   *,
-//   *::before,
-//   *::after {
-//     box-sizing: inherit;
-//   }
-
-// body {
-//     margin: 0;
-// }
-
 .dodo {
-    width: 100%;
-    background: rgba(229, 229, 229, 0.1);
+  width: 100%;
+  background: rgba(229, 229, 229, 0.1);
 }
 
-
 .dodo__container {
-    width: 100%;
+  width: 100%;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (min-width: 1344px) {
+    width: 1344px;
 
     padding-left: 15px;
     padding-right: 15px;
-    
+    padding-bottom: 0;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-  
-    @media screen and (min-width: 480px) {
-      width: 480px;
-    }
-  
-    @media screen and (min-width: 768px) {
-      width: 768px;
+    margin-bottom: 130px;
+  }
+}
 
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-  
-    @media screen and (min-width: 1344px) {
-      width: 1344px;
+.thumb {
+  height: 98px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-bottom: 0;
-
-      margin-bottom: 130px;
-    }
-
+.dodo__icon {
+  fill: $brand-color;
 }
 
 .dodo__title {
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 1.3;
-    letter-spacing: 0.03em;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
 
-    color: #111518;
+  color: #111518;
 
-    margin-top: 0;
-    margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
 
-    text-align: center;
+  text-align: center;
 
-    @media screen and (min-width: 768px) {
-        font-size: 26px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
 
-    @media screen and (min-width: 1344px) {
-        font-size: 46px;
+  @media screen and (min-width: 1344px) {
+    font-size: 46px;
 
-        text-align: start;
+    text-align: start;
 
-        margin-bottom: 50px;
-    }
+    margin-bottom: 50px;
+  }
 }
 
 .dodo__list {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    list-style: none;
+  list-style: none;
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
 
-        margin-left: -20px;
-        margin-top: -27px;
-    }
+    margin-left: -20px;
+    margin-top: -27px;
+  }
 
-    @media screen and (min-width: 1344px) {
-        margin-top: -20px;
-        
-    }
+  @media screen and (min-width: 1344px) {
+    margin-top: -20px;
+  }
 }
 
 .dodo__item {
-    position: relative;
+  position: relative;
 
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 
-    padding-top: 98px;
-    padding-bottom: 7px;
+  width: 280px;
+  height: 280px;
 
-    width: 280px;
-    height: 280px;
+  background-color: #ffffff;
+  transition: background-color 250ms;
 
-    background-color: #FFFFFF;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &:hover {
+    background-color: #ff6b09;
     transition: background-color 250ms;
 
+    // Заливка свг картинок. Класс должен совпадать
+    // .dodo__svg {
+    //     fill: #FFFFFF;
+    // }
+
+    .dodo__item-header {
+      color: #ffffff;
+    }
+
+    .dodo__dash {
+      color: #ffffff;
+    }
+
+    .dodo__info {
+      color: #ffffff;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 20px);
+    height: 334px;
+
+    margin-left: 20px;
+    margin-top: 27px;
+
+    padding: 118px 22px 23px 22px;
+
     &:not(:last-child) {
-        margin-bottom: 15px;
+      margin-bottom: unset;
     }
+  }
 
-    &:hover {
-        background-color: #FF6B09;
-        transition: background-color 250ms;
+  @media screen and (min-width: 1344px) {
+    flex-basis: calc(100% / 3 - 20px);
+    height: 396px;
 
-        // Заливка свг картинок. Класс должен совпадать
-        // .dodo__svg {
-        //     fill: #FFFFFF;
-        // }
+    margin-top: 20px;
 
-        .dodo__item-header {
-            color: #FFFFFF;
-        }
-
-        .dodo__dash {
-            color: #FFFFFF;
-        }
-
-        .dodo__info {
-            color: #FFFFFF;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        flex-basis: calc(100% / 2 - 20px);
-        height: 334px;
-
-        margin-left: 20px;
-        margin-top: 27px;
-
-        padding: 118px 22px 23px 22px;
-
-        &:not(:last-child) {
-            margin-bottom: unset;        
-        }
-    }
-
-    @media screen and (min-width: 1344px) {
-        flex-basis: calc(100% / 3 - 20px);
-        height: 396px;
-
-        margin-top: 20px;
-
-        padding: 118px 30px 55px 30px;
-    }
+    padding: 118px 30px 55px 30px;
+  }
 }
 
 .dodo__img {
-    position: absolute;
+  position: absolute;
 
-    top: 30px;
-    left: 50%;
+  top: 30px;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 
-    &:nth-child(3) {
-        color: #FF6B09;
-    }
+  &:nth-child(3) {
+    color: #ff6b09;
+  }
 }
 
 // .dodo__svg {
@@ -203,71 +194,71 @@
 // }
 
 .dodo__item-header {
-    margin: 0;
+  margin: 0;
 
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.43;
-    letter-spacing: 0.08em;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
 
-    color: #111518;
+  color: #111518;
 
-    text-align: center;
+  text-align: center;
 
-    transition: color 250ms;
+  transition: color 250ms;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 10px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 
-    @media screen and (min-width: 1344px) {
-        font-size: 20px;
-        line-height: 1.4;
+  @media screen and (min-width: 1344px) {
+    font-size: 20px;
+    line-height: 1.4;
 
-        margin-bottom: unset;
-    }
+    margin-bottom: unset;
+  }
 }
 
 .dodo__dash {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.65;
-    letter-spacing: 0.08em;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.65;
+  letter-spacing: 0.08em;
 
-    color: #FF6B09;
+  color: #ff6b09;
 
-    text-align: center;
+  text-align: center;
 
-    transition: color 250ms;
+  transition: color 250ms;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 10px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 
-    @media screen and (min-width: 1344px) {
-        margin-bottom: unset;
-    }
+  @media screen and (min-width: 1344px) {
+    margin-bottom: unset;
+  }
 }
 
 .dodo__info {
-    margin: 0;
+  margin: 0;
 
-    padding-left: 11px;
-    padding-right: 11px;
+  padding-left: 11px;
+  padding-right: 11px;
 
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.67;
-    letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.67;
+  letter-spacing: 0.08em;
 
-    color: #B9B9B9;
+  color: #b9b9b9;
 
-    text-align: center;
+  text-align: center;
 
-    transition: color 250ms;
+  transition: color 250ms;
 
-    @media screen and (min-width: 1344px) {
-        font-size: 18px;
-    }
+  @media screen and (min-width: 1344px) {
+    font-size: 18px;
+  }
 }
