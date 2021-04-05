@@ -74,6 +74,14 @@
     }
   }
 
+  &__slider {
+    position: relative;
+
+    // @media screen and (min-width: $desktop) {
+    //   width: 1090px;
+    // }
+  }
+
   &__article {
     position: relative;
     display: flex;
