@@ -17,9 +17,9 @@
   display: flex;
   align-items: center;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.23;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.09em;
 
   &--menu {
     color: $white;
@@ -34,8 +34,9 @@
 
 .logo__small {
   font-weight: 700;
-  font-size: 5px;
+  font-size: 6px;
   line-height: 1.25;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 
   &--menu {

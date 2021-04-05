@@ -1,3 +1,20 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 34px;
+  z-index: 999;
+  background-color: $mobile-menu-background-color;
+
+  transform: translateX(300%);
+  transition: transform 250ms $timing-fn;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
 .logo-container {
   display: flex;
   align-items: center;
@@ -5,24 +22,39 @@
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: $tablet) {
+  .logo-container {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
 .menu-toggle {
-  margin-left: 179px;
+  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 21px;
-  height: 12px;
 
   padding: 0;
   background-color: transparent;
   cursor: pointer;
   border: none;
   outline: none;
-  fill: $mobile-menu-icon-color;
+  transition: fill 250ms $timing-fn;
 
   &--close {
     fill: $white;
-    margin-left: auto;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $brand-color;
+  }
+}
+
+@media (min-width: $tablet) {
+  .menu-toggle {
+    margin-left: 40px;
   }
 }
 
@@ -32,23 +64,13 @@
   }
 }
 
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 30px 20px;
-  background-color: var(--primary-bg-color);
-  z-index: 999;
-  background-color: $mobile-menu-background-color;
-
-  transform: translateX(300%);
-  transition: transform var(--transform-time) var(--transform-type);
-}
-
-.menu-container.is-open {
-  transform: translateX(0);
+.menu-icon {
+  width: 34px;
+  height: 40px;
+  &--close {
+    width: 33px;
+    height: 33px;
+  }
 }
 
 .mobile-menu {
@@ -69,8 +91,17 @@
   color: $white;
   text-decoration: none;
 
-  &--current {
+  transition: color 250ms $timing-fn;
+
+  &:hover,
+  &:focus {
     color: $brand-color;
+  }
+}
+
+@media (min-width: $tablet) {
+  .mobile-menu__link {
+    font-size: 26px;
   }
 }
 
@@ -91,6 +122,8 @@
 
 .menu__button {
   width: 260px;
+  display: flex;
+  justify-content: center;
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
@@ -105,4 +138,18 @@
   text-transform: uppercase;
 
   color: $brand-color;
+}
+
+@media (min-width: $tablet) {
+  .menu__button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
