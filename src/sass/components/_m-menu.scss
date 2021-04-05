@@ -1,155 +1,147 @@
 .menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 34px;
-  z-index: 999;
-  background-color: $mobile-menu-background-color;
-
-  transform: translateX(300%);
-  transition: transform 250ms $timing-fn;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 30px;
+    z-index: 999;
+    background-color: $mobile-menu-background-color;
+    transform: translateX(300%);
+    transition: transform 250ms $timing-fn;
 }
 
 .menu-container.is-open {
-  transform: translateX(0);
+    transform: translateX(0);
 }
+
 .logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 @media screen and (min-width: $tablet) {
-  .logo-container {
-    justify-content: space-between;
-    width: 100%;
-  }
+    .logo-container {
+        justify-content: space-between;
+        width: 100%;
+    }
 }
 
 .menu-toggle {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: fill 250ms $timing-fn;
-
-  &--close {
-    fill: $white;
-  }
-
-  &:hover,
-  &:focus {
-    fill: $brand-color;
-  }
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: fill 250ms $timing-fn;
+    &--close {
+        fill: $white;
+    }
+    &:hover,
+    &:focus {
+        fill: $brand-color;
+    }
 }
 
 @media (min-width: $tablet) {
-  .menu-toggle {
-    margin-left: 40px;
-  }
+    .menu-toggle {
+        margin-left: 40px;
+    }
 }
 
 @media (min-width: $desktop) {
-  .menu-toggle {
-    display: none;
-  }
+    .menu-toggle {
+        display: none;
+    }
 }
 
 .menu-icon {
-  width: 34px;
-  height: 40px;
-  &--close {
-    width: 33px;
-    height: 33px;
-  }
+    width: 34px;
+    height: 40px;
+    &--close {
+        width: 33px;
+        height: 33px;
+    }
 }
 
 .mobile-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .mobile-menu__link {
-  display: block;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.8;
-  letter-spacing: 0.03em;
-
-  color: $white;
-  text-decoration: none;
-
-  transition: color 250ms $timing-fn;
-
-  &:hover,
-  &:focus {
-    color: $brand-color;
-  }
+    display: block;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    color: $white;
+    text-decoration: none;
+    transition: color 250ms $timing-fn;
+    &:hover,
+    &:focus {
+        color: $brand-color;
+    }
 }
 
 @media (min-width: $tablet) {
-  .mobile-menu__link {
-    font-size: 26px;
-  }
+    .mobile-menu__link {
+        font-size: 26px;
+    }
 }
 
 .mobile-menu__item {
-  &--margin {
-    margin-top: 306px;
-  }
-  &--contact {
-    margin-bottom: 64px;
-  }
+    &--margin {
+        margin-top: 306px;
+    }
+    &--contact {
+        margin-bottom: 64px;
+    }
 }
 
 @media (max-width: $mobile) {
-  .mobile-menu__item--margin {
-    margin-top: 30px;
-  }
+    .mobile-menu__item--margin {
+        margin-top: 30px;
+    }
 }
 
 .menu__button {
-  width: 260px;
-  display: flex;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 50px;
-  padding: 14px 0;
-  background-color: transparent;
-  border: 2px solid $brand-color;
-  text-align: center;
-
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  color: $brand-color;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    padding: 14px 0;
+    background-color: transparent;
+    border: 2px solid $brand-color;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $brand-color;
 }
 
 @media (min-width: $tablet) {
-  .menu__button {
-    display: none;
-  }
+    .menu__button {
+        display: none;
+    }
 }
 
 @media screen and (min-width: $tablet) {
-  .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
