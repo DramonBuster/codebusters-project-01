@@ -31,12 +31,6 @@
     background-position: 0 0;
 
     background-image: url('./../images/hero-img/vector-tablet.png');
-
-    /* Переопределяем путь к 2x изображению
-    если плотность экрана как минимум 2 */
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('./../images/hero-img/vector-tablet@2x.png');
-    }
   }
 
   @media screen and (min-width: $desktop) {
@@ -47,17 +41,12 @@
     background-size: 1680px 922px;
     background-position: center 0;
 
-    background-image: url('./../images/hero-img/vector-desktop.png');
-
-    /* Переопределяем путь к 2x изображению
-    если плотность экрана как минимум 2 */
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('./../images/hero-img/vector-desktop@2x.png');
-    }
+    background-image: url('./../images/hero-img/vector-tablet.png');
   }
 }
 
 .hero__wrapper {
+  position: relative;
   margin-bottom: 77px;
 
   @media screen and (min-width: $mobile) {
@@ -225,5 +214,21 @@
   }
   to {
     opacity: 100%;
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media screen and (min-width: $desktop) {
+    width: 842px;
+    min-height: 719px;
+
+    background-size: 842px 719px;
+    background-position: right 0 top 0;
+    background-repeat: no-repeat;
+
+    background-image: url('./../images/hero-img/hero-img.png');
   }
 }
