@@ -6,11 +6,6 @@
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: $desktop) {
-    width: 1258px;
-    // justify-content: center;
-  }
-
   &__button {
     position: absolute;
     bottom: -62px;
@@ -79,8 +74,15 @@
     }
   }
 
-  &__article {
+  &__slider {
     position: relative;
+
+    // @media screen and (min-width: $desktop) {
+    //   width: 1090px;
+    // }
+  }
+
+  &__article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,7 +100,6 @@
 
     @media screen and (min-width: $desktop) {
       width: 1090px;
-      height: 370px;
       padding: 50px 82px;
     }
   }
@@ -188,6 +189,7 @@
 
       font-size: 14px;
       line-height: 1.2;
+      width: 438px;
     }
   }
 
@@ -202,6 +204,10 @@
       font-size: 18px;
       line-height: 1.56;
     }
+  }
+
+  &__hidden {
+    display: none;
   }
 
   &__link {

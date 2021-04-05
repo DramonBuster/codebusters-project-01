@@ -1,4 +1,35 @@
 // Антон
+.section.section--about {
+    padding-top: 232px;
+    @media screen and (min-width: 341px) {
+        padding-top: 212px;
+    }
+    @media screen and (min-width: 344px) {
+        padding-top: 192px;
+    }
+    @media screen and (min-width: 349px) {
+        padding-top: 172px;
+    }
+    @media screen and (min-width: 376px) {
+        padding-top: 152px;
+    }
+    @media screen and (min-width: 378px) {
+        padding-top: 132px;
+    }
+    @media screen and (min-width: 396px) {
+        padding-top: 112px;
+    }
+    @media screen and (min-width: 425px) {
+        padding-top: 92px;
+    }
+    @media screen and (min-width: $tablet) {
+        padding-top: 314px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 327px;
+    }
+}
+
 .section__title--about {
     text-align: left;
 }

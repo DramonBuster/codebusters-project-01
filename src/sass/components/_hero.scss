@@ -1,6 +1,7 @@
 .hero {
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 50px;
 
   max-width: 480px;
   min-height: 618px;
@@ -8,72 +9,73 @@
   letter-spacing: 0.06em;
   text-align: left;
 
-  background-size: 208px 178px, 100% 665px;
-  background-position: 50% 394px, 0 0;
+  background-size: 100% 665px;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-color: $white;
 
-  background-image: url('./../images/hero-img/hero-img.png'),
-    url('./../images/hero-img/vector-mobile.png');
+  background-image: url('./../images/hero-img/vector-mobile.png');
   box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
 
   /* Переопределяем путь к 2x изображению
     если плотность экрана как минимум 2 */
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('./../images/hero-img/hero-img@2x.png'),
-      url('./../images/hero-img/vector-mobile@2x.png');
+    background-image: url('./../images/hero-img/vector-mobile@2x.png');
   }
 
   @media screen and (min-width: $tablet) {
     max-width: 768px;
     min-height: 557px;
 
-    background-size: 376px 321px, 100% 605px;
-    background-position: 374px 171px, 0 0;
+    background-size: 100% 605px;
+    background-position: 0 0;
 
-    background-image: url('./../images/hero-img/hero-img.png'),
-      url('./../images/hero-img/vector-tablet.png');
-
-    /* Переопределяем путь к 2x изображению
-    если плотность экрана как минимум 2 */
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('./../images/hero-img/hero-img@2x.png'),
-        url('./../images/hero-img/vector-tablet@2x.png');
-    }
+    background-image: url('./../images/hero-img/vector-tablet.png');
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 1688px;
-    min-height: 878px;
+    max-width: 1680px;
+    min-height: 922px;
+    padding-bottom: 130px;
 
-    background-size: 843px 720px, 100% 922px;
-    background-position: top 150px right -15%, 0 0;
+    background-size: 1680px 922px;
+    background-position: center 0;
 
-    background-image: url('./../images/hero-img/hero-img.png'),
-      url('./../images/hero-img/vector-desktop.png');
-
-    /* Переопределяем путь к 2x изображению
-    если плотность экрана как минимум 2 */
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('./../images/hero-img/hero-img@2x.png'),
-        url('./../images/hero-img/vector-desktop@2x.png');
-    }
+    background-image: url('./../images/hero-img/vector-tablet.png');
   }
 }
 
+.hero__wrapper {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 361px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-bottom: 130px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 210px;
+  }
+}
 .hero__content {
   padding-top: 110px;
 
   @media screen and (min-width: $tablet) {
     padding-top: 158px;
-    padding-left: 22px;
-    padding-right: 445px;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: $desktop) {
+    margin-right: 0;
     padding-top: 228px;
-    padding-left: 0;
-    padding-right: 660px;
   }
 }
 
@@ -90,12 +92,14 @@
   color: $title-color;
 
   @media screen and (min-width: $tablet) {
+    width: 295px;
     font-weight: 800;
     font-size: 26px;
     line-height: 1.308;
   }
 
   @media screen and (min-width: $desktop) {
+    width: 610px;
     font-weight: 800;
     font-size: 58px;
     line-height: 1.293;
@@ -163,4 +167,74 @@
     font-size: 14px;
     line-height: 1.21;
   }
+}
+
+.hero__img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*анимация*/
+@keyframes opacity {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.hero__img {
+  width: 208px;
+  min-height: 178px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 77px;
+
+  background-size: 208px 178px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-image: url('./../images/hero-img/hero-img.png');
+
+  /* Переопределяем путь к 2x изображению
+    если плотность экрана как минимум 2 */
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('./../images/hero-img/hero-img@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transform: translate(-10px, 171px);
+
+    width: calc(384px + (50% - 384px));
+    min-height: 320px;
+
+    background-size: 376px 320px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc(726px + (50% - 672px));
+
+    min-height: 719px;
+
+    transform: translate(-55px, 151px);
+
+    background-size: 842px 719px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: 1572px) {
+    width: 842px;
+  }
+  /*анимация*/
+  animation: opacity 5s 1;
+  animation-fill-mode: forwards;
 }

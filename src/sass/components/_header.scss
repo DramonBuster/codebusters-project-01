@@ -1,1 +1,93 @@
-// Ира
+.page-header {
+  background-color: $white;
+  padding-bottom: 0;
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+  padding-top: 34px;
+}
+
+.link {
+  text-decoration: none;
+  color: $title-color;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  margin-left: 144px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: $desktop) {
+  .site-nav__list {
+    display: none;
+  }
+}
+
+.site-nav__item {
+  &:not(:first-child) {
+    margin-left: 40px;
+  }
+}
+
+.site-nav__link {
+  display: inline-block;
+  color: $primary-text-color;
+  transition: color 250ms $timing-fn;
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+  }
+}
+
+.page-header__button {
+  cursor: pointer;
+  margin-left: auto;
+  padding: 26px 23px;
+  background-color: $white;
+  border: 2px solid $brand-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: $brand-color;
+}
+
+@media (min-width: $tablet) {
+  .page-header__button {
+    padding: 16px 12px;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: $tablet) {
+  .page-header__button {
+    display: none;
+  }
+}
+
+.page-header__menu-icon {
+  fill: $mobile-menu-icon-color;
+  width: 21px;
+  height: 12px;
+}
