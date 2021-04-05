@@ -1,122 +1,104 @@
 // Алина
-
 .benefits {
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: transparent;
-  position: absolute;
-  top: 73%;
-  left: 0;
-  right: 0;
-
-  @media screen and (min-width: $tablet) {
-    top: 85%;
-  }
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 72.5%;
+    left: 0;
+    right: 0;
+    @media screen and (min-width: $tablet) {
+        top: 85%;
+    }
 }
 
 .benefits__title {
-  margin-top: 0;
-  margin-bottom: 30px;
-  width: 180px;
-  
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.36;
-  letter-spacing: 0.03em;
-  
-  color: $white;
-  
-  @media screen and (min-width: $tablet) {
-    width: 100%;
-    font-size: 26px;
-    line-height: 1.3;
-  }
-  
-  @media screen and (min-width: $desktop) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-          
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-}
-  
-.benefits__container {
-  padding: 20px 30px;
-  
-  background-color: $white;
-  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
-  z-index: 1;
-  
-  @media screen and (min-width: $tablet) {
-    padding: 30px 120px 25px 98px;
-  }
-  
-  @media screen and (min-width: $desktop) {
-    padding: 70px 82px 70px 84px;
-  }
-}
-  
-.benefits__list {
-  counter-reset: section;
-  list-style-type: none;
-  
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  
-    margin-left: calc( -1 * 30px);
-    margin-top: calc( -1 * 30px);
-  
-    & > .benefits__item {
-      flex-basis: calc(100% / 2 - 30px);
-      margin-left: 30px;
-      margin-top: 30px;
-    }
-  }
-  
-  @media screen and (min-width: $desktop) {
-    & > .benefits__item {
-      flex-basis: calc(100% / 3 - 32px);
-      margin-left: 32px;
-      margin-top: 32px;
-    }
-  }
-}
-  
-.benefits__item {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.43;
-  letter-spacing: 0.08em;
-    
-  color: $title-color;
-  
-  &::before {
-    display: block;
-    counter-increment: section;
-    content: "— 0" counter(section) " ";
-    margin-bottom: 10px;
-    line-height: 1.64;
-  
-    color: $brand-color;
-  }
-  
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
-  }
-  
-  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 180px;
+    font-weight: 800;
     font-size: 20px;
-    line-height: 1.4;
-  }
+    line-height: 1.36;
+    letter-spacing: 0.03em;
+    color: $white;
+    @media screen and (min-width: $tablet) {
+        width: 100%;
+        font-size: 26px;
+        line-height: 1.3;
+        text-align: center;
+    }
+    @media screen and (min-width: $desktop) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+}
+
+.benefits__container {
+    padding: 20px 30px;
+    background-color: $white;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    z-index: 1;
+    @media screen and (min-width: $tablet) {
+        padding: 30px 120px 25px 98px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 70px 82px 70px 84px;
+    }
+}
+
+.benefits__list {
+    counter-reset: section;
+    list-style-type: none;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: calc(-1 * 30px);
+        margin-top: calc(-1 * 30px);
+        &>.benefits__item {
+            flex-basis: calc(100% / 2 - 30px);
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+    }
+    @media screen and (min-width: $desktop) {
+        &>.benefits__item {
+            flex-basis: calc(100% / 3 - 32px);
+            margin-left: 32px;
+            margin-top: 32px;
+        }
+    }
+}
+
+.benefits__item {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.08em;
+    color: $title-color;
+    &::before {
+        display: block;
+        counter-increment: section;
+        content: '— 0' counter(section) ' ';
+        margin-bottom: 10px;
+        line-height: 1.64;
+        color: $brand-color;
+    }
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    @media screen and (min-width: $desktop) {
+        font-size: 20px;
+        line-height: 1.4;
+    }
 }
