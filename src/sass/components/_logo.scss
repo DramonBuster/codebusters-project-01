@@ -16,9 +16,13 @@
   display: flex;
   align-items: center;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.23;
   letter-spacing: 0.04em;
+
+  &--menu {
+    color: $white;
+  }
 }
 
 @media screen and (min-width: $tablet) {
@@ -29,15 +33,19 @@
 
 .logo__small {
   font-weight: 700;
-  font-size: 6px;
+  font-size: 5px;
   line-height: 1.25;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
+
+  &--menu {
+    color: $white;
+  }
 }
 
 @media screen and (min-width: $tablet) {
   .logo__small {
     font-size: 8px;
+    letter-spacing: 0.18em;
   }
 }
 

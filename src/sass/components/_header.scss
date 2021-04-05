@@ -1,1 +1,79 @@
-// Ира
+.page-header {
+  background-color: $white;
+  padding-top: 34px;
+  padding-bottom: 0;
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: $title-color;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  margin-left: 144px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: $desktop) {
+  .site-nav__list {
+    display: none;
+  }
+}
+
+.site-nav__item:not(:first-child) {
+  margin-left: 40px;
+}
+
+.site-nav__link {
+  display: inline-block;
+  color: $primary-text-color;
+
+  &--current {
+    color: $brand-color;
+  }
+}
+
+.page-header__button {
+  margin-left: auto;
+  padding: 27px 23px 26px 24px;
+  background-color: $white;
+  border: 2px solid $brand-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: $brand-color;
+}
+
+@media (max-width: $desktop) {
+  .page-header__button {
+    display: none;
+  }
+}
