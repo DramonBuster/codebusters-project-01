@@ -3,7 +3,7 @@
   margin-right: auto;
   padding-bottom: 50px;
 
-  max-width: 480px;
+  width: 100%;
   min-height: 618px;
 
   letter-spacing: 0.06em;
@@ -15,7 +15,6 @@
   background-color: $white;
 
   background-image: url('./../images/hero-img/vector-mobile.png');
-  box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
 
   /* Переопределяем путь к 2x изображению
     если плотность экрана как минимум 2 */
@@ -24,7 +23,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    max-width: 768px;
     min-height: 557px;
 
     background-size: 100% 605px;
@@ -40,7 +38,6 @@
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 1680px;
     min-height: 922px;
     padding-bottom: 130px;
 
