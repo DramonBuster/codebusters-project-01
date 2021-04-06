@@ -2,11 +2,11 @@
     const mobileMenu = document.querySelector('.js-menu-container');
     const openMenuBtn = document.querySelector('.js-open-menu');
     const closeMenuBtn = document.querySelector('.js-close-menu');
-    const menuList = document.querySelector('.mmenu__link');
+    const menuList = document.querySelector('.memu-nav');
 
     const removeMenu = (e) => {
         e.preventDefault;
-        mobileMenu.classList.remove('is-open');
+        // mobileMenu.classList.remove('is-open');
         console.log("123");
     }
     const toggleMenu = () => {
