@@ -31,6 +31,12 @@
     background-position: 0 0;
 
     background-image: url('./../images/hero-img/vector-tablet.png');
+
+    /* Переопределяем путь к 2x изображению
+    если плотность экрана как минимум 2 */
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('./../images/hero-img/vector-tablet@2x.png');
+    }
   }
 
   @media screen and (min-width: $desktop) {
@@ -41,40 +47,27 @@
     background-size: 1680px 922px;
     background-position: center 0;
 
-    background-image: url('./../images/hero-img/vector-tablet.png');
+    background-image: url('./../images/hero-img/vector-desktop.png');
+
+    /* Переопределяем путь к 2x изображению
+    если плотность экрана как минимум 2 */
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('./../images/hero-img/vector-desktop@2x.png');
+    }
   }
 }
 
-.hero__wrapper {
+.hero__content {
   margin-bottom: 30px;
-
-  @media screen and (min-width: 361px) {
-    margin-bottom: 40px;
-  }
-
-  @media screen and (min-width: $mobile) {
-    margin-bottom: 50px;
-  }
+  padding-top: 110px;
 
   @media screen and (min-width: $tablet) {
-    display: flex;
     margin-bottom: 130px;
+    padding-top: 158px;
   }
 
   @media screen and (min-width: $desktop) {
     margin-bottom: 210px;
-  }
-}
-.hero__content {
-  padding-top: 110px;
-
-  @media screen and (min-width: $tablet) {
-    padding-top: 158px;
-    margin-bottom: 0;
-  }
-
-  @media screen and (min-width: $desktop) {
-    margin-right: 0;
     padding-top: 228px;
   }
 }
@@ -83,6 +76,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
+  width: 275px;
 
   font-weight: 800;
   font-size: 20px;
@@ -170,21 +164,6 @@
 }
 
 .hero__img {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*анимация*/
-@keyframes opacity {
-  from {
-    opacity: 50%;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-
-.hero__img {
   width: 208px;
   min-height: 178px;
   margin-left: auto;
@@ -224,7 +203,7 @@
 
     min-height: 719px;
 
-    transform: translate(-55px, 151px);
+    transform: translate(-55px, 149px);
 
     background-size: 842px 719px;
     background-position: 0 0;
@@ -234,7 +213,18 @@
   @media screen and (min-width: 1572px) {
     width: 842px;
   }
-  /*анимация*/
+
+  /*анимация
   animation: opacity 5s 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;*/
+}
+
+/*анимация*/
+@keyframes opacity {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
