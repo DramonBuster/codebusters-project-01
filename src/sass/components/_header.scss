@@ -74,6 +74,13 @@
   text-transform: uppercase;
   color: $brand-color;
 
+  &:hover,
+  &:focus {
+    background-color: $brand-color;
+    color: $white;
+    transition: background-color 250ms, color 250ms;
+  }
+
   @media (min-width: $tablet) {
     display: inline;
   }
