@@ -9,17 +9,17 @@
   letter-spacing: 0.06em;
   text-align: left;
 
-  background-size: 100% 665px;
-  background-position: 0 0;
+  background-size: 768px 618px;
+  background-position: -65px 50px;
   background-repeat: no-repeat;
   background-color: $white;
 
-  background-image: url('./../images/hero-img/vector-mobile.png');
+  background-image: url('./../images/hero-img/vector-tablet.png');
 
   /* Переопределяем путь к 2x изображению
     если плотность экрана как минимум 2 */
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('./../images/hero-img/vector-mobile@2x.png');
+    background-image: url('./../images/hero-img/vector-tablet@2x.png');
   }
 
   @media screen and (min-width: $tablet) {
