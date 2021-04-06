@@ -92,12 +92,14 @@
         line-height: 1.64;
         color: $brand-color;
     }
-    @media screen and (max-width: 767px) {
-        &:not(:last-child) {
-            margin-bottom: 20px;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 0;
         }
+        
     }
-    @media screen and (min-width: $desktop) {
+        @media screen and (min-width: $desktop) {
         font-size: 20px;
         line-height: 1.4;
     }

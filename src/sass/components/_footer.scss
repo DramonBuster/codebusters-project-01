@@ -90,8 +90,9 @@
         width: 1px;
         height: 40px;
         left: -24px;
-        @media (max-width: 767px) {
-            display: none;
+        display: none;
+        @media (min-width: $tablet) {
+            display: inline;
         }
     }
 }

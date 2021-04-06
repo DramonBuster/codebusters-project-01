@@ -24,20 +24,20 @@
 }
 
 .site-nav__list {
-    display: flex;
-    align-items: center;
     margin-left: 144px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.21;
     letter-spacing: 0.04em;
-    text-align: center;
     text-transform: uppercase;
+    display: none;
 }
 
-@media (max-width: 1343px) {
+@media (min-width: $desktop) {
     .site-nav__list {
-        display: none;
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 }
 
@@ -72,17 +72,16 @@
     color: $brand-color;
 }
 
+.page-header__button {
+    display: none;
+}
+
 @media (min-width: $tablet) {
     .page-header__button {
+        display: inline;
         padding: 16px 12px;
         font-size: 14px;
         line-height: 1.25;
-    }
-}
-
-@media (max-width: 767px) {
-    .page-header__button {
-        display: none;
     }
 }
 

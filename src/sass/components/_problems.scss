@@ -100,9 +100,10 @@
     line-height: 1.5;
     color: $brand-color;
   }
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
     }
   }
   @media screen and (min-width: $tablet) {

@@ -125,12 +125,11 @@
   line-height: 28px;
   letter-spacing: 0.08em;
   max-width: 100%;
-  @media screen and (max-width: 767px) {
     margin-left: 26px;
     margin-bottom: 50px;
-  }
   @media screen and (min-width: $tablet) {
     margin-left: 56px;
+    margin-bottom: 0;
   }
   @media screen and (min-width: $desktop) {
     display: flex;
@@ -145,18 +144,14 @@
 .program-list__item {
   text-transform: uppercase;
   position: relative;
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      margin-bottom: 40px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 40px;
   }
   @media screen and (min-width: $tablet) {
     &:not(:last-child) {
       margin-bottom: 30px;
       margin-right: 30px;
     }
-  }
-  @media screen and (min-width: $desktop) {
   }
 }
 
@@ -168,12 +163,9 @@
   background-color: $brand-color;
   border-radius: 50%;
   transform: rotate(90deg);
-  @media screen and (max-width: 767px) {
-    top: 7px;
-    left: -33.1px;
-  }
+  top: 7px;
+  left: -33.1px;
   @media screen and (min-width: $tablet) {
-    top: 7px;
     left: -63.5px;
   }
   @media screen and (min-width: $desktop) {
@@ -191,8 +183,6 @@
   text-transform: none;
   color: $brand-color;
   margin-top: 5px;
-  @media screen and (max-width: 767px) {
-  }
   @media screen and (min-width: $tablet) {
     display: flex;
   }
@@ -205,11 +195,9 @@
 }
 
 .program-course__item {
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      margin-bottom: 8px;
-      max-width: 176px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 8px;
+    max-width: 176px;
   }
   @media screen and (min-width: $tablet) {
     &:not(:first-child) {
@@ -217,6 +205,7 @@
     }
     &:not(:last-child) {
       margin-bottom: 0;
+      max-width: none;
     }
     &:nth-child(1) {
       width: 176px;

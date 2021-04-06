@@ -43,11 +43,12 @@
   }
 
   &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
     }
   }
-
+    
   @media screen and (min-width: $tablet) {
     flex-basis: calc(100% / 3 - 20px);
     margin-top: 20px;
