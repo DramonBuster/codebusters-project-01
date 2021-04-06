@@ -146,6 +146,14 @@
   text-align: center;
   padding: 16px 9px;
 
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $brand-color;
+    box-shadow: 2px 2px 2px $brand-color;
+    transition: background-color 250ms, color 250ms, box-shadow 250ms;
+  }
+
   @media screen and (min-width: $tablet) {
     margin-left: 0;
   }
