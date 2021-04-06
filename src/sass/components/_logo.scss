@@ -1,8 +1,28 @@
+.logo {
+  @media screen and (max-width: 767px) {
+    min-width: 80px;
+    // height: 50px;
+    // box-sizing: border-box;
+  }
+}
+.logt {
+  display: flex;
+  min-width: 80px;
+  // height: 20px;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
 .logo__icon {
-  margin: 0 4px;
+  // margin: 0 4px;
   fill: $brand-color;
   width: 14px;
   height: 19px;
+
+  @media screen and (max-width: 767px) {
+    margin: 1px;
+    // margin: 0 4px;
+  }
 }
 
 @media screen and (min-width: $tablet) {
@@ -18,9 +38,21 @@
   align-items: center;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.23;
-  letter-spacing: 0.09em;
+  // line-height: 1.23;
+  // letter-spacing: 0.09em;
+  @media screen and (max-width: 767px) {
+    line-height: 0.05;
+    // letter-spacing: 0.01em;
+    display: inline-block;
+    margin-bottom: 3.76px;
+  }
 
+  @media screen and (min-width: $tablet) {
+    display: block;
+    line-height: 1.23;
+    // letter-spacing: 0.09em;
+    // margin-bottom: 5px;
+  }
   &--menu {
     color: $white;
   }
@@ -36,8 +68,15 @@
   font-weight: 700;
   font-size: 6px;
   line-height: 1.25;
-  letter-spacing: 0.18em;
+  // letter-spacing: 0.18em;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    // letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
+    font-size: 6px;
+    display: block;
+  }
 
   &--menu {
     color: $white;
@@ -47,7 +86,7 @@
 @media screen and (min-width: $tablet) {
   .logo__small {
     font-size: 8px;
-    letter-spacing: 0.18em;
+    // letter-spacing: 0.18em;
   }
 }
 
