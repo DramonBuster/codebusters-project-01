@@ -8,7 +8,7 @@
   text-align: center;
   letter-spacing: 0.08em;
   background-color: $brand-color;
-  color: #fff;
+  color: $white;
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid $brand-color;
@@ -22,9 +22,9 @@
     cursor: pointer;
   }
 
-  &:focus,
-  &:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  // &:focus,
+  // &:hover {
+  //   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  //   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // }
 }
