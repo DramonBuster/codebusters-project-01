@@ -134,6 +134,25 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $brand-color;
+
+    &:hover,
+    &:focus {
+    background-color: $brand-color;
+    color: $white;
+    border-color: $white;
+    transition: background-color 250ms, color 250ms, border-color 250ms;
+
+    // Второй варинат закраски кнопки
+    // &:hover,
+    // &:focus {
+    // // background-color: $brand-color;
+    // color: $white;
+
+    // transition: background-color 250ms, color 250ms;
+    // }
+  }
+
+
 }
 
 @media (min-width: $tablet) {
