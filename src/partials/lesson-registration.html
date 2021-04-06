@@ -1,21 +1,20 @@
 <!-- Настя -->
 <section class="section form-registration__section" id="form-registration">
-  <div class="container form-registration__container">
-    <h2 class="section__title section__title--white">
-      Регистрация на <span class="section__title--orange">бесплатную</span> телефонную
-      <span>консультацию</span> по нюансам ЗНО по английскому языку
-    </h2>
-    <form class="form-registration">
-      <b class="form-registration__text"
-        >Оставь заявку на участие в
+    <div class="container form-registration__container">
+        <h2 class="section__title section__title--white">
+            Регистрация на <span class="section__title--orange">бесплатную</span> телефонную
+            <span>консультацию</span> по нюансам ЗНО по английскому языку
+        </h2>
+        <form class="form-registration" method="POST" action="../action.php">
+            <b class="form-registration__text">Оставь заявку на участие в
         <span class="form-registration__text--orange">бесплатном занятии.</span><br />
         С вами свяжется консультант и ответит на вопросы</b
       >
-      <label class="form-registration__label" for="name"></label>
+      <label class="form-registration__label" for="user_name"></label>
       <input
         class="form-registration__input form-registration__input--name"
         type="text"
-        name="name"
+        name="user_name"
         id="name"
         maxlength="20"
         pattern="^[А-Яа-яЁё]+$"
@@ -23,13 +22,13 @@
         placeholder="Имя*"
       />
 
-      <label class="form-registration__label" for="tel"></label>
+      <label class="form-registration__label" for="user_phone"></label>
       <input
         class="form-registration__input form-registration__input--tel"
         type="tel"
-        name="tel"
-        id="tel"
-        maxlength="13"
+        name="user_phone"
+        id="user_phone"
+        maxlength="14"
         pattern="\+380[0-9]+$"
         title="Номер телефона должен начинаться с '+380'"
         placeholder="Телефон*"
