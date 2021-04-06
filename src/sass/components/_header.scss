@@ -58,6 +58,7 @@
 }
 
 .page-header__button {
+  display: none;
   cursor: pointer;
   margin-left: auto;
   background-color: $white;
@@ -72,11 +73,9 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: $brand-color;
-}
 
-@media (max-width: $tablet) {
-  .page-header__button {
-    display: none;
+  @media (min-width: $tablet) {
+    display: inline;
   }
 }
 
