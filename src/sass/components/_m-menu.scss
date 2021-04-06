@@ -7,8 +7,12 @@
     padding-top: 30px;
     z-index: 999;
     background-color: $mobile-menu-background-color;
+    background-attachment:fixed;
+    overflow-y: scroll;
     transform: translateX(300%);
     transition: transform 250ms $timing-fn;
+
+
 }
 
 .menu-container.is-open {
