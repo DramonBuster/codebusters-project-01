@@ -74,7 +74,7 @@
   color: $brand-color;
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet) {
   .page-header__button {
     display: none;
   }
