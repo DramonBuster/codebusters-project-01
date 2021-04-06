@@ -9,40 +9,34 @@
   letter-spacing: 0.06em;
   text-align: left;
 
-  background-size: 100% 665px;
-  background-position: 0 0;
+  background-size: 768px 605px;
+  background-position: calc(50vw - 225px) 60px;
   background-repeat: no-repeat;
   background-color: $white;
 
-  background-image: url('./../images/hero-img/vector-mobile.png');
+  background-image: url('./../images/hero-img/vector-tablet.png');
 
   /* Переопределяем путь к 2x изображению
     если плотность экрана как минимум 2 */
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('./../images/hero-img/vector-mobile@2x.png');
+    background-image: url('./../images/hero-img/vector-tablet@2x.png');
+  }
+
+  @media screen and (min-width: 450px) {
+    background-position: 0 60px;
   }
 
   @media screen and (min-width: $tablet) {
-    min-height: 557px;
-
     background-size: 100% 605px;
     background-position: 0 0;
-
-    background-image: url('./../images/hero-img/vector-tablet.png');
-
-    /* Переопределяем путь к 2x изображению
-    если плотность экрана как минимум 2 */
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('./../images/hero-img/vector-tablet@2x.png');
-    }
   }
 
   @media screen and (min-width: $desktop) {
-    min-height: 922px;
+    min-height: 878px;
     padding-bottom: 130px;
 
-    background-size: 1680px 922px;
-    background-position: center 0;
+    background-size: 1680px 878px;
+    background-position: center 20px;
 
     background-image: url('./../images/hero-img/vector-desktop.png');
 
