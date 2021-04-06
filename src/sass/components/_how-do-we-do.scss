@@ -127,7 +127,6 @@
   &:hover,
   &:focus {
     background-color: #ff6b09;
-    transition: background-color 250ms;
     color: $white;
 
     .dodo__item-header {
@@ -146,6 +145,7 @@
   &:hover .thumb__dodo,
   &:focus .thumb__dodo {
     color: $white;
+    transition: color 250ms;
   }
 
   @media screen and (min-width: $tablet) {
