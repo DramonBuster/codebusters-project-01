@@ -3,49 +3,40 @@
   margin-right: auto;
   padding-bottom: 50px;
 
-  max-width: 480px;
+  width: 100%;
   min-height: 618px;
 
   letter-spacing: 0.06em;
   text-align: left;
 
-  background-size: 100% 665px;
-  background-position: 0 0;
+  background-size: 768px 605px;
+  background-position: calc(50vw - 225px) 60px;
   background-repeat: no-repeat;
   background-color: $white;
 
-  background-image: url('./../images/hero-img/vector-mobile.png');
-  box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
+  background-image: url('./../images/hero-img/vector-tablet.png');
 
   /* Переопределяем путь к 2x изображению
     если плотность экрана как минимум 2 */
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('./../images/hero-img/vector-mobile@2x.png');
+    background-image: url('./../images/hero-img/vector-tablet@2x.png');
+  }
+
+  @media screen and (min-width: 450px) {
+    background-position: 0 60px;
   }
 
   @media screen and (min-width: $tablet) {
-    max-width: 768px;
-    min-height: 557px;
-
     background-size: 100% 605px;
     background-position: 0 0;
-
-    background-image: url('./../images/hero-img/vector-tablet.png');
-
-    /* Переопределяем путь к 2x изображению
-    если плотность экрана как минимум 2 */
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('./../images/hero-img/vector-tablet@2x.png');
-    }
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 1680px;
-    min-height: 922px;
+    min-height: 878px;
     padding-bottom: 130px;
 
-    background-size: 1680px 922px;
-    background-position: center 0;
+    background-size: 1680px 878px;
+    background-position: center 20px;
 
     background-image: url('./../images/hero-img/vector-desktop.png');
 
@@ -137,17 +128,21 @@
 }
 
 .hero__service-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  padding: 0;
   border-width: 0;
   margin-left: auto;
   margin-right: auto;
+  // text-align: center;
 
-  display: block;
+  &:focus,
+  &:hover {
 
-  align-items: center;
-  text-align: center;
-  padding: 16px 9px;
+    @media screen and (min-width: $tablet) {
+    }
+  }
 
   @media screen and (min-width: $tablet) {
     margin-left: 0;

@@ -1,16 +1,19 @@
 // Юля
 .dodo {
     width: 100%;
-    background: rgba(229, 229, 229, 0.1);
+    padding-bottom: 50px;
+
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 130px;
+    }
 }
 
 .dodo__container {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
     @media screen and (min-width: 480px) {
         width: 480px;
     }
@@ -24,12 +27,11 @@
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 0;
-        margin-bottom: 130px;
     }
 }
 
 .thumb__dodo {
-    height: 78px;
+    height: 48px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -42,7 +44,6 @@
 
 @media screen and (min-width: $tablet) {
     .thumb__dodo {
-        height: 88px;
         margin-bottom: 30px;
     }
 }
@@ -88,9 +89,8 @@
 
 .dodo__item {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 280px;
+    padding: 30px 6px 22px 6px;
+    max-width: 100%;
     height: 280px;
     background-color: #ffffff;
     box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
@@ -102,6 +102,7 @@
     &:focus {
         background-color: #ff6b09;
         color: $white;
+        box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.2);
         .dodo__item-header {
             color: #ffffff;
         }
@@ -120,9 +121,10 @@
     @media screen and (min-width: $tablet) {
         flex-basis: calc(100% / 2 - 20px);
         height: 334px;
+        width: 280px;
         margin-left: 20px;
         margin-top: 27px;
-        padding: 0 20px;
+        padding: 40px 20px 20px 20px;
         &:not(:last-child) {
             margin-bottom: unset;
         }
@@ -131,7 +133,7 @@
         flex-basis: calc(100% / 3 - 20px);
         height: 396px;
         margin-top: 20px;
-        padding: 0 30px;
+        padding: 40px 30px 55px 30px;
     }
 }
 
