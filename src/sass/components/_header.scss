@@ -73,6 +73,14 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: $brand-color;
+  transition: background-color 250ms $timing-fn, color 250ms $timing-fn, box-shadow 250ms $timing-fn;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-color;
+    color: $white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
 
   @media (min-width: $tablet) {
     display: inline;
