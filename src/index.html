@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hell EN — Адский Английский</title>
     <link rel="icon" type="image/ico" href="./images/campfire.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <!-- предыдущий вариант нормалайза 
       <link
         rel="stylesheet"
@@ -18,15 +16,11 @@
         crossorigin="anonymous"
       />-->
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.2.0/modern-normalize.css"
-      integrity="sha512-oxqL25oMBPTFLK5OOR4U/Y//5oyc+3B8MJVTuGD2FLdyA+VXlhKMyQ7YjHNSI5+CLk0UdMLw1lV64dDuT1Batw=="
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.2.0/modern-normalize.css" integrity="sha512-oxqL25oMBPTFLK5OOR4U/Y//5oyc+3B8MJVTuGD2FLdyA+VXlhKMyQ7YjHNSI5+CLk0UdMLw1lV64dDuT1Batw==" crossorigin="anonymous" />
     <script src="//impuls-web.ru/wp-content/themes/impulsweb/js/jquery-latest.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <include src="./partials/header.html"></include>
     <include src="./partials/hero.html"></include>
@@ -42,11 +36,14 @@
     <include src="./partials/footer.html"></include>
 
     <include src="./partials/m-menu.html"></include>
+    <include src="./partials/to-top.html"></include>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
     <script src="./read-more.js"></script>
     <script src="./anchor.js"></script>
     <script defer src="./mobile-menu.js"></script>
-  </body>
+    <script src="./to-top.js"></script>
+</body>
+
 </html>
