@@ -1,6 +1,4 @@
 const charCount = 384;
-console.log(charCount);
-const sliderBtn = document.querySelector('.slider-arrow');
 
 function onloadHideText(textElement, hideBtn) {
     let text = textElement.innerHTML.split("<")[0];
