@@ -86,6 +86,7 @@
       flex-direction: row;
       padding: 40px;
       text-align: start;
+      align-items: flex-start;
     }
     @media screen and (min-width: $desktop) {
       padding: 50px 112px 50px 82px;
