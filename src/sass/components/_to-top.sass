@@ -1,0 +1,39 @@
+#toTop
+	position: fixed
+	display: inline-block
+
+	bottom: 30px
+	right: -40px
+	width: 40px
+	height: 40px
+	z-index: 1000
+	cursor: pointer
+	text-align: center
+	color: #fff
+	border-radius: 4px
+	background: $brand-color
+	box-shadow: 0 0 0 1px rgba(0,0,0,.2)
+	opacity: 0.8
+	visibility: hidden
+	transition: all .3s ease-in-out
+
+	&:hover
+		opacity: 1
+		background: #fff
+
+	& svg
+		position: relative
+		top: 12px
+		right: -1px
+		fill: #fff
+		transition: all .3s ease-in-out
+
+	&:hover svg
+		cursor: pointer
+		fill: $brand-color
+		transition: all .3s ease-in-out
+
+	&.show
+		// opacity: 1
+		visibility: visible
+		right: calc(2%)
