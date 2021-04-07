@@ -57,7 +57,7 @@
   /*мобильный 480px*/
   @media screen and (min-width: $mobile) {
     width: 440px;
-    min-height: 600px;
+    min-height: 620px;
   }
 
   /*ноут*/
@@ -133,6 +133,9 @@
     padding: 15px;
   }
 
+  @media screen and (min-width: $tablet) {
+    padding: 25px 15px;
+  }
   @media screen and (min-width: $desktop) {
     padding: 30px;
   }
