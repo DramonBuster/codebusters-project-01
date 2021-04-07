@@ -1,5 +1,6 @@
 // Алексей
 .reviews {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -58,17 +59,21 @@
   }
   &__slider {
     position: relative;
-    width: 1090px;
+    width: 100%;
     margin: 0px 112px;
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.14);
     // height: 370px;
-    // @media screen and (min-width: $desktop) {
-    //   width: 1090px;
-    // }
+    @media screen and (min-width: $tablet) {
+      width: 688px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 1090px;
+    }
   }
   &__sl-item {
     display: flex;
     justify-content: center;
+    min-height: 100%;
   }
   &__article {
     display: flex;
@@ -182,6 +187,12 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    @media screen and (min-width: 397px) {
+      width: 248px;
+    }
+    @media screen and (min-width: 640px) {
+      width: 300px;
+    }
     @media screen and (min-width: $tablet) {
       width: 558px;
       margin-top: 30px;
@@ -190,14 +201,14 @@
       margin-top: 40px;
     }
   }
-  &__list-item {
-        &:nth-child(n + 4) {
-            display: none;
-            @media screen and (min-width: $tablet) {
-                display: inline;
-            }
-        } 
-    }
+  //   &__list-item {
+  //     &:nth-child(n + 4) {
+  //       display: none;
+  //       @media screen and (min-width: $tablet) {
+  //         display: inline;
+  //       }
+  //     }
+  //   }
   &__list-thumb {
     width: 56px;
     height: 56px;
@@ -219,23 +230,109 @@
   }
 }
 
-.check-item {
-  color: black;
+// .check-item {
+//   color: black;
+// }
+
+// .check-nav-item {
+//   color: black;
+//   font-size: 12px;
+// }
+// .two > .slick-list {
+//     width: 100%;
+// }
+
+// .slick-list > .slick-track {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+.is-active > .reviews__list-thumb {
+  border: 1px solid $brand-color;
 }
 
-.check-nav-item {
-  color: black;
-  font-size: 12px;
+.two > .slick-arrow {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.slick-current > .reviews__list-thumb {
-    border: 1px solid $brand-color;
-}
-.two > .slick-list {
-    width: 100%;
+.slick-arrow {
+  position: absolute;
+  top: auto;
+  bottom: -78px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  fill: black;
+  @media screen and (min-width: $tablet) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $brand-color;
+  }
 }
 
-.slick-list > .slick-track {
-    display: flex;
-    justify-content: space-between;
+.slick-prev {
+  left: 0px;
+  background-image: url('../images/arrow-left.svg');
+  background-color: transparent;
+  transition: 250ms $timing-fn;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media screen and (min-width: $tablet) {
+    left: -15px;
+  }
+  @media screen and (min-width: $desktop) {
+    left: -85px;
+  }
+  &::before {
+    content: '';
+  }
+  &:hover {
+    background-image: url('../images/arrow-left-w.svg');
+    background-repeat: no-repeat;
+    transition: 250ms $timing-fn;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.slick-next {
+  right: 0px;
+  background-image: url('../images/arrow-right.svg');
+  background-color: transparent;
+  transition: 250ms $timing-fn;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media screen and (min-width: $tablet) {
+    right: -15px;
+  }
+  @media screen and (min-width: $desktop) {
+    right: -85px;
+  }
+  &::before {
+    content: '';
+  }
+  &:hover {
+    background-image: url('../images/arrow-right-w.svg');
+  transition: 250ms $timing-fn;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  }
 }
