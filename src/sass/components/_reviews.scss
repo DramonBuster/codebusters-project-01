@@ -266,28 +266,22 @@
   overflow: hidden;
 }
 
-.slick-arrow {
+// .slick-arrow {
+
+// //   @media screen and (min-width: $tablet) {
+// //     top: 50%;
+// //     transform: translateY(-50%);
+// //   }
+// }
+
+.slick-prev {
   position: absolute;
   top: auto;
+  left: 0px;
   bottom: -78px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-
-  fill: black;
-  @media screen and (min-width: $tablet) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $brand-color;
-  }
-}
-
-.slick-prev {
-  left: 0px;
   background-image: url('../images/arrow-left.svg');
   background-color: transparent;
   transition: 250ms $timing-fn;
@@ -296,6 +290,8 @@
 
   @media screen and (min-width: $tablet) {
     left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   @media screen and (min-width: $desktop) {
     left: -85px;
@@ -309,11 +305,18 @@
     transition: 250ms $timing-fn;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-color: $brand-color;
   }
 }
 
 .slick-next {
+  position: absolute;
+  top: auto;
   right: 0px;
+  bottom: -78px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   background-image: url('../images/arrow-right.svg');
   background-color: transparent;
   transition: 250ms $timing-fn;
@@ -322,6 +325,8 @@
 
   @media screen and (min-width: $tablet) {
     right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   @media screen and (min-width: $desktop) {
     right: -85px;
@@ -334,5 +339,6 @@
   transition: 250ms $timing-fn;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+    background-color: $brand-color;
   }
 }
