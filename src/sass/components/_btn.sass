@@ -1,0 +1,26 @@
+.btn
+	position: relative
+	overflow: hidden
+	z-index: 1
+
+	& span
+		position: absolute
+		z-index: 1000
+		height: 12px
+		width: 12px
+		border-radius: 100%
+		background: #fff
+
+		-webkit-animation: buttonWave 2s
+		animation: buttonWave 2s
+
+@keyframes buttonWave
+	0%
+		opacity: 0.2
+		-webkit-transform: scale(1)
+		transform: scale(1)
+
+	100%
+		opacity: 0
+		-webkit-transform: scale(30)
+		transform: scale(30)
