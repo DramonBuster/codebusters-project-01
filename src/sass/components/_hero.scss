@@ -128,24 +128,20 @@
 }
 
 .hero__service-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  padding: 0;
   border-width: 0;
   margin-left: auto;
   margin-right: auto;
+  // text-align: center;
 
-  display: block;
+  &:focus,
+  &:hover {
 
-  align-items: center;
-  text-align: center;
-  padding: 16px 9px;
-
-  &:hover,
-  &:focus {
-    background-color: $white;
-    color: $brand-color;
-    box-shadow: 2px 2px 2px $brand-color;
-    transition: background-color 250ms, color 250ms, box-shadow 250ms;
+    @media screen and (min-width: $tablet) {
+    }
   }
 
   @media screen and (min-width: $tablet) {
