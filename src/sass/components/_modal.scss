@@ -37,6 +37,11 @@
   pointer-events: none;
 }
 
+/*когда открыта модалка - не дает скроллить контент на фоне*/
+body.modal-open {
+  overflow: hidden;
+}
+
 /*модальное окно*/
 .modal {
   position: absolute;
@@ -46,7 +51,9 @@
   transform: translate(-50%, -50%);
 
   min-width: 300px;
-  height: 600px;
+  min-height: 600px;
+
+  max-height: 80vh;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -54,16 +61,15 @@
 
   background-color: $white;
 
-  /*мобильный 480px*/
   @media screen and (min-width: $mobile) {
     width: 440px;
-    min-height: 620px;
+    /*min-height: 620px;*/
   }
 
   /*ноут*/
   @media screen and (min-width: $desktop) {
     min-width: 528px;
-    min-height: 596px;
+    /*min-height: 596px;*/
   }
 }
 
