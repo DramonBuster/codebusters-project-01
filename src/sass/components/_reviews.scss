@@ -1,46 +1,19 @@
 // Алексей
 .reviews {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    &__button {
-        position: absolute;
-        bottom: -62px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: transparent;
-        transition: 250ms $timing-fn;
-        @media screen and (min-width: $tablet) {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        &--left {
-            left: 0;
-            @media screen and (min-width: $tablet) {
-                left: -15px;
-            }
-            @media screen and (min-width: $desktop) {
-                left: -85px;
-            }
-        }
-        &--right {
-            right: 0;
-            @media screen and (min-width: $tablet) {
-                right: -15px;
-            }
-            @media screen and (min-width: $desktop) {
-                right: -85px;
-            }
-        }
-        &:focus,
-        &:hover {
-            background-color: $brand-color;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-            cursor: pointer;
-        }
-    }
+    // text-align: center;
+    // padding: 20px;
+    // padding-bottom: 30px;
+    // @media screen and (min-width: $tablet) {
+    //     // flex-direction: row;
+    //     padding: 40px;
+    //     text-align: start;
+    //     align-items: flex-start;
+    // }
     &__button-icon {
         position: absolute;
         top: 50%;
@@ -58,9 +31,24 @@
     }
     &__slider {
         position: relative;
-        // @media screen and (min-width: $desktop) {
-        //   width: 1090px;
-        // }
+        width: 100%;
+        margin: 0px 112px;
+        box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.14);
+        // height: 370px;
+        @media screen and (min-width: $tablet) {
+            width: 688px;
+        }
+        @media screen and (min-width: $desktop) {
+            width: 1090px;
+        }
+    }
+    &__sl-item {
+        display: flex;
+        justify-content: center;
+        min-height: 100%;
+        &:focus {
+            outline: none;
+        }
     }
     &__article {
         display: flex;
@@ -69,9 +57,9 @@
         text-align: center;
         padding: 20px;
         padding-bottom: 30px;
-        box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
         @media screen and (min-width: $tablet) {
             flex-direction: row;
+            align-items: flex-start;
             padding: 40px;
             text-align: start;
         }
@@ -97,6 +85,7 @@
     &__author {
         width: 90px;
         height: 90px;
+        border-radius: 50%;
         @media screen and (min-width: $tablet) {
             width: 150px;
             height: 150px;
@@ -174,6 +163,12 @@
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
+        @media screen and (min-width: 397px) {
+            width: 248px;
+        }
+        @media screen and (min-width: 640px) {
+            width: 300px;
+        }
         @media screen and (min-width: $tablet) {
             width: 558px;
             margin-top: 30px;
@@ -182,24 +177,134 @@
             margin-top: 40px;
         }
     }
-    &__list-item:nth-child(n + 4) {
-        display: none;
-        @media screen and (min-width: $tablet) {
-            display: inline;
+    &__list-item {
+        &:focus {
+            outline: none;
         }
     }
     &__list-thumb {
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        border-radius: 40px;
         overflow: hidden;
         background-color: transparent;
-        &--current {
-            border: 1px solid $brand-color;
-        }
+        border: 1px solid transparent;
+        // &--current {
+        //   border: 1px solid $brand-color;
+        // }
     }
     &__list-photo {
         width: 54px;
         height: 54px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// .check-item {
+//   color: black;
+// }
+// .check-nav-item {
+//   color: black;
+//   font-size: 12px;
+// }
+// .two > .slick-list {
+//     width: 100%;
+// }
+// .slick-list > .slick-track {
+//     display: flex;
+//     justify-content: space-between;
+// }
+.is-active>.reviews__list-thumb {
+    border: 1px solid $brand-color;
+}
+
+.two>.slick-arrow {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+// .slick-arrow {
+// //   @media screen and (min-width: $tablet) {
+// //     top: 50%;
+// //     transform: translateY(-50%);
+// //   }
+// }
+.slick-prev {
+    position: absolute;
+    top: auto;
+    left: 0px;
+    bottom: -78px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url('../images/arrow-left.svg');
+    background-color: transparent;
+    transition: 250ms $timing-fn;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    @media screen and (min-width: $tablet) {
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @media screen and (min-width: $desktop) {
+        left: -85px;
+    }
+    &::before {
+        content: '';
+    }
+    &:hover,
+    &:focus {
+        background-image: url('../images/arrow-left-w.svg');
+        background-repeat: no-repeat;
+        transition: 250ms $timing-fn;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-color: $brand-color;
+    }
+}
+
+.slick-next {
+    position: absolute;
+    top: auto;
+    right: 0px;
+    bottom: -78px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url('../images/arrow-right.svg');
+    background-color: transparent;
+    transition: 250ms $timing-fn;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    @media screen and (min-width: $tablet) {
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @media screen and (min-width: $desktop) {
+        right: -85px;
+    }
+    &::before {
+        content: '';
+    }
+    &:hover,
+    &:focus {
+        background-image: url('../images/arrow-right-w.svg');
+        transition: 250ms $timing-fn;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-color: $brand-color;
     }
 }
