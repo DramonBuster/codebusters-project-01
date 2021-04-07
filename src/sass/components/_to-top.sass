@@ -1,6 +1,7 @@
 #toTop
 	position: fixed
 	display: inline-block
+
 	bottom: 30px
 	right: -40px
 	width: 40px
@@ -12,11 +13,12 @@
 	border-radius: 4px
 	background: $brand-color
 	box-shadow: 0 0 0 1px rgba(0,0,0,.2)
-	opacity: 0
+	opacity: 0.8
 	visibility: hidden
 	transition: all .3s ease-in-out
 
 	&:hover
+		opacity: 1
 		background: #fff
 
 	& svg
@@ -32,6 +34,6 @@
 		transition: all .3s ease-in-out
 
 	&.show
-		opacity: 0.8
+		// opacity: 1
 		visibility: visible
 		right: calc(2%)
