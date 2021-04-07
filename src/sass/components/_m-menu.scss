@@ -22,12 +22,14 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  margin-top: 5px;
 }
 
 @media screen and (min-width: $tablet) {
   .logo-container {
     justify-content: space-between;
     width: 100%;
+    margin-top: 0px;
   }
 }
 
