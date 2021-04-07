@@ -22,6 +22,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 757px) {
+    margin-top: 5px;
+  }
 }
 
 @media screen and (min-width: $tablet) {
