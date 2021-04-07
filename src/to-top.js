@@ -42,6 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // При клике прокручиываем на самый верх
     btn.onclick = function(click) {
         click.preventDefault();
-        scrollTo(0, 400);
+        scrollTo(0, 700);
     }
 });
