@@ -23,3 +23,9 @@
 .logo__icon--color {
   fill: $white;
 }
+.logo {
+  &:focus {
+    // outline-style: solid;
+    outline-color: $brand-color;
+  }
+}
