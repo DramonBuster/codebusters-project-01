@@ -235,7 +235,9 @@
 //     display: flex;
 //     justify-content: space-between;
 // }
-.is-active > .reviews__list-thumb {
+.is-active > .reviews__list-thumb,
+ .reviews__list-thumb:hover,
+ .reviews__list-thumb:focus {
   border: 1px solid $brand-color;
 }
 
