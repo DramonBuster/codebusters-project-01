@@ -1,8 +1,8 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
+    openModalBtn: document.querySelector('[bata-modal-open]'),
+    closeModalBtn: document.querySelector('[bata-modal-close]'),
+    modal: document.querySelector('[bata-modal]'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
