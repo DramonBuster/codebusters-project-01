@@ -6,7 +6,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  min-width: 400px;
+  width: 300px;
   min-height: 300px;
 
   max-height: 90vh;
@@ -18,8 +18,7 @@
   background-color: $white;
 
   @media screen and (min-width: $mobile) {
-    width: 440px;
-    /*min-height: 620px;*/
+    width: 400px;
   }
 
   /*ноут*/
@@ -42,22 +41,51 @@
   flex-direction: column;
 }
 
-.form__title2 {
-  margin-bottom: 20px;
+.form-contacts {
+  padding: 20px;
 
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.489;
-  text-align: center;
-  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.03em;
+
+  color: $title-color;
+
+  @media screen and (min-width: 480px) {
+    padding: 15px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 25px 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 30px;
+  }
 }
 
-.form__subtitle {
+.form__title2 {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.489;
   text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+}
+
+.form__subtitle {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.489;
+  text-align: center;
   color: $secondary-text-color;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
 }
 
 .form__service-button {
